@@ -9,7 +9,6 @@ Creates GTFS and feed for Tokyo from various data sourced, mainly the
 and the [Public Transportation Open Data Center](https://developer.odpt.org/).
 
 
-
 Precautions
 -----------
 
@@ -53,17 +52,17 @@ Options: `-h`/`--help`, `-v`/`--verbose`.
 
 After those flags, one has to specify what action to take:
 
-- **create-gtfs** (`python -m static.rail create-gtfs`):  
+- **create-gtfs** (`python3 -m static.rail create-gtfs`):  
   Creates the GTFS file. See `python -m static.rail create-gtfs --help` for all the options.
 
-- **dump-provider** (`python -m static.rail dump-provider <provider_name>`):  
+- **dump-provider** (`python3 -m static.rail dump-provider <provider_name>`):  
   Dumps all train of a provider into `data_cached` (which can be later re-used in `create-gtfs --from-cache`).  
   Used to debug problems with a specific provider.
 
-- **check-geo** (`python -m static.rail check-geo [agency-or-line]`):  
+- **check-geo** (`python3 -m static.rail check-geo [agency-or-line]`):  
   Used internally to check and verify the structure of the curated rail_geo.osm.
 
-- **check-names** (`python -m static.rail check-names`):  
+- **check-names** (`python3 -m static.rail check-names`):  
   Used internally to check the structure of the curated station_names.csv file.
 
 
