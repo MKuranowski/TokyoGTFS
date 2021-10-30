@@ -1,0 +1,9 @@
+.benchmarks
+.pytest_cache
+.venv
+.vscode
+__pycache__
+apikeys.json
+data_cached
+data_gtfs
+*.zip
