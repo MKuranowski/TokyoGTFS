@@ -11,7 +11,7 @@ from ..const import RAIL_GTFS_HEADERS, Color, DIR_CURATED
 from ..util import first_part, compress_gtfs
 from .blocksolver import BlockSolver
 from .converter import Converter
-from .exporters import SimpleExporter
+from ..exporter import SimpleExporter
 from .geo import StationHandler, station_names
 from .model import ConvertOptions
 from .mux import (Cache, multiplex_trains, multiplex_trains_from_cache,
@@ -89,11 +89,11 @@ def create_gtfs(opts: ConvertOptions) -> int:
     converter.save_trains(caches.values())
 
     logger.info("Exporting stations")
-    with closing(SimpleExporter("stops")) as e:
+    with SimpleExporter("stops") as e:
         stations.export(e, translations)
 
     logger.info("Exporting calendars")
-    with closing(SimpleExporter("calendar_dates")) as e:
+    with SimpleExporter("calendar_dates") as e:
         calendars.export(e)
 
     logger.info("Exporting other files")

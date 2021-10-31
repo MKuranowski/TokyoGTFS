@@ -5,11 +5,10 @@ import csv
 import logging
 from typing import Any, Iterable, Mapping
 
-from ..const import DIR_GTFS, RAIL_GTFS_HEADERS, Color
-from . import model
+from .const import DIR_GTFS, RAIL_GTFS_HEADERS, Color
 
 
-class SimpleExporter(model.Exporter):
+class SimpleExporter:
     def __init__(self, name: str) -> None:
         self.logger = logging.getLogger(f"Exporter.{name}")
 
@@ -21,6 +20,12 @@ class SimpleExporter(model.Exporter):
         self.writer = csv.DictWriter(self.fileobj, RAIL_GTFS_HEADERS[self.fname])
         self.writer.writeheader()
         self.count = 0
+
+    def __enter__(self) -> "SimpleExporter":
+        return self
+
+    def __exit__(self, exc_type: Any, exc_value: Any, traceback: Any) -> None:
+        self.close()
 
     def save(self, thing: Mapping[str, Any]) -> None:
         self.count += 1

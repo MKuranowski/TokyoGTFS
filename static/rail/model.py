@@ -3,7 +3,7 @@
 
 from abc import ABC, abstractmethod, abstractproperty
 from dataclasses import dataclass, asdict
-from typing import Any, Dict, Iterable, List, Mapping, NamedTuple, Optional, Set
+from typing import Any, Dict, Iterable, List, Mapping, NamedTuple, Optional, Protocol, Set
 from datetime import date, datetime, timedelta
 
 from ..const import FUTURE_DAYS
@@ -173,9 +173,9 @@ class Provider(ABC):
     def train_types(self) -> Iterable[TrainType]: ...
 
 
-class Exporter(ABC):
-    @abstractmethod
+class Exporter(Protocol):
+    def __enter__(self) -> "Exporter": ...
+    def __exit__(self, __exc_type, __exc_value, __traceback) -> Any: ...
+    def save(self, __thing: Mapping[str, Any]) -> None: ...
+    def save_many(self, __things: Iterable[Mapping[str, Any]]) -> None: ...
     def close(self) -> None: ...
-
-    @abstractmethod
-    def save(self, thing: Mapping[str, Any]) -> None: ...
