@@ -1,23 +1,24 @@
 # Copyright (c) 2021 Mikołaj Kuranowski
 # SPDX-License-Identifier: MIT
 
+from itertools import chain
 import logging
 from contextlib import closing
 from datetime import datetime
 
 from pytz import timezone
 
-from ..const import RAIL_GTFS_HEADERS, Color, DIR_CURATED
-from ..util import first_part, compress_gtfs
+from ..const import DIR_CURATED, RAIL_GTFS_HEADERS, Color
+from ..exporter import SimpleExporter
+from ..other import CalendarHandler, export_attribution, export_feedinfo
+from ..util import compress_gtfs, first_part
 from .blocksolver import BlockSolver
 from .converter import Converter
-from ..exporter import SimpleExporter
 from .geo import StationHandler, station_names
 from .model import ConvertOptions
 from .mux import (Cache, multiplex_trains, multiplex_trains_from_cache,
                   multiplex_trains_of_provider)
-from .other import (CalendarHandler, RouteData, export_agencies,
-                    export_attribution, export_feedinfo, export_routes)
+from .other import RouteData, export_agencies, export_routes
 from .providers import (get_all_providers, get_provider_by_name,
                         get_provider_for)
 
@@ -40,7 +41,7 @@ def create_gtfs(opts: ConvertOptions) -> int:
 
     # Load calendar data
     logger.info("Loading calendars")
-    calendars.load(providers)
+    calendars.load(chain.from_iterable(p.calendars() for p in providers))
 
     # Load route data
     logger.info("Loading route data")
