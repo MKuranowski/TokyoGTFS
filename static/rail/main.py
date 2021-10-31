@@ -105,6 +105,8 @@ def create_gtfs(opts: ConvertOptions) -> int:
     translations.close()
     converter.trips.close()
     converter.times.close()
+    for p in providers:
+        p.close()
 
     logger.info(f"Compressing to {opts.target}")
     compress_gtfs(target=opts.target, files=RAIL_GTFS_HEADERS)
