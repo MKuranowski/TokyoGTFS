@@ -17,7 +17,7 @@ from .const import (ATTRIBUTION_URL, DEFAULT_PUBLISHER_NAME,
 # Typing stuff. We don't use models, as those are either rail- or bus-specific.
 
 class _WithSave(Protocol):
-    def save(self, thing: Mapping[str, Any]) -> Any: ...
+    def save(self, __thing: Mapping[str, Any]) -> Any: ...
 
 
 class _CalendarLike(Protocol):
