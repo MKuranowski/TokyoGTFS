@@ -5,11 +5,13 @@ import csv
 import logging
 from typing import Any, Iterable, Mapping
 
-from .const import DIR_GTFS, RAIL_GTFS_HEADERS, Color
+from .const import BUS_GTFS_HEADERS, DIR_GTFS, RAIL_GTFS_HEADERS, Color
 
 
 class SimpleExporter:
-    def __init__(self, name: str) -> None:
+    def __init__(self, name: str, is_bus: bool = False) -> None:
+        headers = BUS_GTFS_HEADERS if is_bus else RAIL_GTFS_HEADERS
+
         self.logger = logging.getLogger(f"Exporter.{name}")
 
         self.fname = name + ".txt"
@@ -17,7 +19,7 @@ class SimpleExporter:
 
         self.logger.info("Opening file")
         self.fileobj = open(self.filepath, "w", encoding="utf-8", newline="")
-        self.writer = csv.DictWriter(self.fileobj, RAIL_GTFS_HEADERS[self.fname])
+        self.writer = csv.DictWriter(self.fileobj, headers[self.fname])
         self.writer.writeheader()
         self.count = 0
 

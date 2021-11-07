@@ -1,0 +1,14 @@
+agency,color,route_timetables_available,comment
+Toei,5da762,1,
+JRBusKanto,3163ff,0,
+KeioBus,00377e,1,
+KokusaiKogyoBus,7ce126,1,
+OdakyuBus,da1100,0,missing stop positions
+SeibuBus,00b6c3,1,
+TobuBus,ff944c,1,
+TokyuBus,dd1133,1,
+NishiTokyoBus,f88686,1,
+KantoBus,d7261c,1,
+Kanachu,e0c748,0,stop positions are missing
+SotetsuBus,1e90ff,1,
+YokohamaMunicipal,0070bb,1,

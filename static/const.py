@@ -34,6 +34,27 @@ RAIL_GTFS_HEADERS = {
     "feed_info.txt": ["feed_publisher_name", "feed_publisher_url", "feed_lang", "feed_version"]
 }
 
+BUS_GTFS_HEADERS = {
+    "agency.txt": ["agency_id", "agency_name", "agency_url", "agency_timezone", "agency_lang"],
+
+    "stops.txt": ["stop_id", "stop_code", "stop_name", "stop_lat", "stop_lon"],
+
+    "routes.txt": ["agency_id", "route_id", "route_short_name", "route_long_name",
+                   "route_type", "route_color", "route_text_color"],
+
+    "calendar_dates.txt": ["service_id", "date", "exception_type"],
+
+    "translations.txt": ["table_name", "field_name", "record_id", "language", "translation"],
+
+    "trips.txt": ["route_id", "trip_id", "service_id", "trip_headsign", "direction_id",
+                  "wheelchair_accessible"],
+
+    "stop_times.txt": ["trip_id", "stop_sequence", "stop_id", "arrival_time", "departure_time"],
+
+    "attributions.txt": ["organization_name", "is_producer", "is_authority", "attribution_url"],
+    "feed_info.txt": ["feed_publisher_name", "feed_publisher_url", "feed_lang", "feed_version"]
+}
+
 FUTURE_DAYS = 120
 PROGRESS_STEP = 500
 

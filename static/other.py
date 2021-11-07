@@ -3,6 +3,7 @@
 
 import csv
 import io
+import logging
 from collections import defaultdict
 from copy import copy
 from datetime import date, datetime, timedelta
@@ -12,8 +13,7 @@ import requests
 
 from .const import (ATTRIBUTION_URL, DEFAULT_PUBLISHER_NAME,
                     DEFAULT_PUBLISHER_URL, DIR_GTFS, FUTURE_DAYS,
-                    RAIL_GTFS_HEADERS)
-
+                    RAIL_GTFS_HEADERS, Color)
 
 # Typing stuff. We don't use models, as those are either rail- or bus-specific.
 
@@ -45,10 +45,13 @@ class CalendarHandler:
         self.start = start_date
         self.end = end_date
 
+        self.logger = logging.getLogger("CalendarHandler")
+
         self.used: defaultdict[_RouteID, Set[_CalendarID]] = defaultdict(set)
         self.valid: Set[_CalendarID] = set()
         self.holidays: Set[date] = set()
         self.special: defaultdict[date, Set[_CalendarID]] = defaultdict(set)
+        self.exported: Set[str] = set()
 
         self.built_ins_priority: List[List[_CalendarID]] = [
             ["Monday", "Weekday", "Everyday"],
@@ -116,6 +119,10 @@ class CalendarHandler:
                     # Add this special calendar to self.valid
                     self.valid.add(calendar.id)
 
+            else:
+                self.logger.warn(f"{Color.YELLOW}Calendar {calendar.id} is not built-in, "
+                                 f"bus has no specific days{Color.RESET}")
+
     def use(self, route_id: _RouteID, calendar_id: _CalendarID) -> Optional[str]:
         """Checks if this pair of route_id and calendar_id can be used.
         If yes, returns the service_id to be used in the GTFS.
@@ -154,6 +161,7 @@ class CalendarHandler:
 
                 for active_service in active_services:
                     service_id = route_id + "." + active_service
+                    self.exported.add(service_id)
 
                     exporter.save({
                         "service_id": service_id,

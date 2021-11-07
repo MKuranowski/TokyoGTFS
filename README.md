@@ -40,8 +40,6 @@ TokyoGTFS is written in [Python 3](https://python.org) and depends on several ex
 
 Before launching install those using `pip3 install -r requirements.txt`, or e.g. from your package manager.
 
-Currently, only a script for converting static rail data is available.
-
 Here's a list of all the scripts.
 
 ### static.rail
@@ -64,6 +62,20 @@ After those flags, one has to specify what action to take:
 
 - **check-names** (`python3 -m static.rail check-names`):  
   Used internally to check the structure of the curated station_names.csv file.
+
+### static.bus
+
+`python3 -m static.bus`
+
+Options: `-h`/`--help`, `-v`/`--verbose`.
+
+After those flags, one has to specify what action to take:
+
+- **create-gtfs** (`python3 -m static.rail create-gtfs`):  
+  Creates the GTFS file. See `python -m static.rail create-gtfs --help` for all the options.
+
+- **count-stops** (`python3 -m static.rail count-stops`):  
+  Writes out the proportion of valid stops per agency, per provider.
 
 
 Attributions
