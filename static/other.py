@@ -14,6 +14,7 @@ from .const import (ATTRIBUTION_URL, DEFAULT_PUBLISHER_NAME,
                     DEFAULT_PUBLISHER_URL, DIR_GTFS, FUTURE_DAYS,
                     RAIL_GTFS_HEADERS)
 
+
 # Typing stuff. We don't use models, as those are either rail- or bus-specific.
 
 class _WithSave(Protocol):

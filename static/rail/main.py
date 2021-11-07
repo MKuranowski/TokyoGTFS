@@ -3,7 +3,6 @@
 
 from itertools import chain
 import logging
-from contextlib import closing
 from datetime import datetime
 
 from pytz import timezone

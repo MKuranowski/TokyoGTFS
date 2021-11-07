@@ -344,8 +344,8 @@ class BlockSolver:
         #             matches.append(other.id)
 
         #     if matches:
-        #         self.logger.info(f"Train {Color.CYAN}{train.id}{Color.RESET} - fallback mechanism "
-        #                          "when looking for previous trains was useful :^)")
+        #         self.logger.info(f"Train {Color.CYAN}{train.id}{Color.RESET} - fallback "
+        #                          "mechanism when looking for previous trains was useful :^)")
 
         return matches
 
@@ -375,8 +375,8 @@ class BlockSolver:
         #             matches.append(other.id)
 
         #     if matches:
-        #         self.logger.info(f"Train {Color.CYAN}{train.id}{Color.RESET} - fallback mechanism "
-        #                          "when looking for next trains was useful :^)")
+        #         self.logger.info(f"Train {Color.CYAN}{train.id}{Color.RESET} - fallback "
+        #                          "mechanism when looking for next trains was useful :^)")
 
         return matches
 
