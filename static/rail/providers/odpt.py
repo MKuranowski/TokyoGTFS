@@ -2,7 +2,8 @@
 # SPDX-License-Identifier: MIT
 
 from datetime import datetime
-from typing import Any, Iterable, Iterator, List, Optional, Set, Union
+from typing import (Any, Iterable, Iterator, List, Mapping, Optional, Set,
+                    Tuple, Union)
 from urllib.parse import quote as urlquote
 from urllib.parse import urljoin
 
@@ -48,6 +49,23 @@ def api_tt_obj_station(api_tt_obj: Any) -> model.StationID:
 def api_time_to_int(api_time: str) -> int:
     h, m = map(int, api_time.split(":"))
     return h*3600 + m*60
+
+
+def get_arr_dep_times(api_time: Mapping[str, Any]) -> Tuple[int, int]:
+    arr_str = api_time.get("odpt:arrivalTime")
+    dep_str = api_time.get("odpt:departureTime")
+
+    if arr_str and dep_str:
+        arr = api_time_to_int(arr_str)
+        dep = api_time_to_int(dep_str)
+    elif arr_str:
+        arr = dep = api_time_to_int(arr_str)
+    elif dep_str:
+        arr = dep = api_time_to_int(dep_str)
+    else:
+        arr = dep = -1
+
+    return arr, dep
 
 
 class ApiSession:
@@ -161,19 +179,8 @@ class ODPTProvider(model.Provider):
             for api_tt_obj in api_train["odpt:trainTimetableObject"]:
                 sta = api_tt_obj_station(api_tt_obj)
 
-                arr_str = api_tt_obj.get("odpt:arrivalTime")
-                dep_str = api_tt_obj.get("odpt:departureTime")
-
-                if arr_str and dep_str:
-                    arr = api_time_to_int(arr_str)
-                    dep = api_time_to_int(dep_str)
-                elif arr_str:
-                    arr = dep = api_time_to_int(arr_str)
-                elif dep_str:
-                    arr = dep = api_time_to_int(dep_str)
-                else:
-                    # FIXME: Handle trains without times
-                    arr = dep = -1
+                # FIXME: Handle invalid arrival and departure times
+                arr, dep = get_arr_dep_times(api_tt_obj)
 
                 # Fix midnight timetravel
                 # FIXME: Also handle trains starting after midnight?
