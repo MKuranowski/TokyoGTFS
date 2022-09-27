@@ -4,9 +4,9 @@ from typing import List
 
 from ...apikeys import set_apikeys
 from ..model import Provider
-from .odpt import ODPTProvider, TokyoChallengeProvider
+from .odpt import ODPTProvider
 
-KNOWN_PROVIDERS: List[Provider] = [ODPTProvider(), TokyoChallengeProvider()]
+KNOWN_PROVIDERS: List[Provider] = [ODPTProvider()]
 
 
 def get_all_providers() -> List[Provider]:

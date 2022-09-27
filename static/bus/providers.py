@@ -34,7 +34,15 @@ class ODPTProvider(model.Provider):
 
     @property
     def provides(self) -> Set[model.AgencyID]:
-        return {"KeioBus", "NishiTokyoBus", "SeibuBus", "Toei", "TokyuBus", "YokohamaMunicipal"}
+        return {
+            "KeioBus",
+            "NishiTokyoBus",
+            "SeibuBus",
+            "SotetsuBus",
+            "Toei",
+            "TokyuBus",
+            "YokohamaMunicipal",
+        }
 
     @property
     def attribution(self) -> str:
@@ -224,26 +232,7 @@ class ODPTProvider(model.Provider):
         return valid_stops, invalid_stops
 
 
-class TokyoChallengeProvider(ODPTProvider):
-    def _ensure_session(self):
-        if self._session is None:
-            self._session = ApiSession("https://api-tokyochallenge.odpt.org/api/v4/",
-                                       self._apikey)
-
-    @property
-    def name(self) -> str:
-        return "odpt_tokyo"
-
-    @property
-    def provides(self) -> Set[model.AgencyID]:
-        return {"KantoBus", "KokusaiKogyoBus", "SotetsuBus", "TobuBus"}
-
-    @property
-    def attribution(self) -> str:
-        return "Open Data Challenge for Public Transportation in Tokyo"
-
-
 def get_all_providers() -> List[model.Provider]:
-    p = [TokyoChallengeProvider(), ODPTProvider()]
+    p: List[model.Provider] = [ODPTProvider()]
     set_apikeys(p)
     return p

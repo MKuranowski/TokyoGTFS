@@ -111,7 +111,7 @@ class ODPTProvider(model.Provider):
 
     @property
     def provides(self) -> Set[model.AgencyID]:
-        return {"Toei", "MIR", "YokohamaMunicipal", "TamaMonorail"}
+        return {"Toei", "TokyoMetro", "TWR", "MIR", "YokohamaMunicipal", "TamaMonorail"}
 
     @property
     def attribution(self) -> str:
@@ -248,22 +248,3 @@ class ODPTProvider(model.Provider):
                     id=remove_prefix(api_train_type["owl:sameAs"]),
                     name=model.Name(**api_train_type["odpt:trainTypeTitle"])
                 )
-
-
-class TokyoChallengeProvider(ODPTProvider):
-    def _ensure_session(self):
-        if self._session is None:
-            self._session = ApiSession("https://api-tokyochallenge.odpt.org/api/v4/",
-                                       self._apikey)
-
-    @property
-    def name(self) -> str:
-        return "odpt_tokyo"
-
-    @property
-    def provides(self) -> Set[model.AgencyID]:
-        return {"TokyoMetro", "TWR", "JR-East", "Sotetsu"}
-
-    @property
-    def attribution(self) -> str:
-        return "Open Data Challenge for Public Transportation in Tokyo"

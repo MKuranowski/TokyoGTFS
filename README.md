@@ -4,27 +4,23 @@ TokyoGTFS
 Description
 -----------
 
-Creates GTFS and feed for Tokyo from various data sourced, mainly the 
-[Open Data Challenge for Public Transportation in Tokyo](https://tokyochallenge.odpt.org/)
-and the [Public Transportation Open Data Center](https://developer.odpt.org/).
+Creates GTFS and feed for Tokyo from various data, mainly the [Public Transportation Open Data Center](https://developer.odpt.org/).
 
 
 Precautions
 -----------
 
-You need to have both the Tokyo Challenge apikey and ODPT apikey.
+You need to have both the ODPT apikey.
 
 Create a file called `apikeys.json` with the following content:
 
 ```json
 {
-    "odpt": "YOUR_ODPT_APIKEY_HERE",
-    "odpt_tokyo": "YOUR_TOKYO_CHALLENGE_APIKEY_HERE"
+    "odpt": "YOUR_ODPT_APIKEY_HERE"
 }
 ```
 
-Alternatively, the script can read the apikeys from `APIKEY_ODPT` and `APIKEY_ODPT_TOKYO`
-environment variables.
+Alternatively, the script can read the apikey from `APIKEY_ODPT` environment variable.
 
 It's also possible to put the apikeys.json file in a different place - if path to that
 file is provided via the `APIKEYS_FILE` environment variable.
