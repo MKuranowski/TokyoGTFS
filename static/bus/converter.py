@@ -47,7 +47,7 @@ class Converter:
                     "agency_url": data["url"],
                     "agency_timezone": "Asia/Tokyo",
                     "agency_lang": "ja"
-                }),
+                })
 
                 self.translations.save({
                     "table_name": "agency",
