@@ -1,16 +1,16 @@
 # Copyright (c) 2021 Mikołaj Kuranowski
 # SPDX-License-Identifier: MIT
 
-from itertools import chain
 import logging
 from datetime import datetime
+from itertools import chain
 
 from pytz import timezone
 
-from ..const import DIR_CURATED, RAIL_GTFS_HEADERS, Color
+from ..const import DIR_CACHE, DIR_CURATED, DIR_GTFS, RAIL_GTFS_HEADERS, Color
 from ..exporter import SimpleExporter
 from ..other import CalendarHandler, export_attribution, export_feedinfo
-from ..util import compress_gtfs, first_part
+from ..util import compress_gtfs, ensure_dir_exists, first_part
 from .blocksolver import BlockSolver
 from .converter import Converter
 from .geo import StationHandler, station_names
@@ -25,6 +25,10 @@ logger = logging.getLogger("Main")
 
 
 def create_gtfs(opts: ConvertOptions) -> int:
+    logger.info("Creating required directories")
+    ensure_dir_exists(DIR_CACHE, clear=False)
+    ensure_dir_exists(DIR_GTFS, clear=True)
+
     logger.info("Getting providers")
     providers = get_all_providers()
     creation_time = datetime.now(timezone("Asia/Tokyo"))

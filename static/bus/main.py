@@ -7,10 +7,10 @@ from itertools import chain
 
 from pytz import timezone
 
-from ..const import BUS_GTFS_HEADERS, Color
+from ..const import BUS_GTFS_HEADERS, DIR_CACHE, DIR_GTFS, Color
 from ..exporter import SimpleExporter
 from ..other import CalendarHandler, export_attribution, export_feedinfo
-from ..util import compress_gtfs
+from ..util import compress_gtfs, ensure_dir_exists
 from .converter import Converter
 from .model import ConvertOptions
 from .providers import get_all_providers
@@ -19,6 +19,10 @@ logger = logging.getLogger("Main")
 
 
 def create_gtfs(opts: ConvertOptions) -> int:
+    logger.info("Creating required directories")
+    ensure_dir_exists(DIR_CACHE, clear=False)
+    ensure_dir_exists(DIR_GTFS, clear=True)
+
     logger.info("Getting providers")
     providers = get_all_providers()
     creation_time = datetime.now(timezone("Asia/Tokyo"))
