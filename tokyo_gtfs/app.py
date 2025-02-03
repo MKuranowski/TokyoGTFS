@@ -3,6 +3,7 @@ from argparse import Namespace
 from impuls import App, HTTPResource, Pipeline, PipelineOptions
 
 from .generate_blocks import GenerateBlocks
+from .generate_headsigns import GenerateHeadsigns
 from .load_schedules import LoadSchedules
 
 
@@ -13,8 +14,8 @@ class TokyoGTFS(App):
             tasks=[
                 LoadSchedules(),
                 GenerateBlocks(),
+                GenerateHeadsigns(),
                 # TODO
-                # GenerateHeadsigns(),
                 # CurateAgencies(),
                 # CurateRoutes(),
                 # AddAttributions(),

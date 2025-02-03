@@ -6,6 +6,8 @@ from typing import cast
 
 from impuls import DBConnection, Task, TaskRuntime
 
+from .util import unpack_list
+
 
 @dataclass
 class BlockNode:
@@ -38,9 +40,9 @@ class GenerateBlocks(Task):
         return {
             cast(str, i[0]): BlockNode(
                 cast(str, i[0]),
-                _split(cast(str, i[1])),
-                _split(cast(str, i[2])),
-                _split(cast(str, i[3])),
+                unpack_list(cast(str, i[1])),
+                unpack_list(cast(str, i[2])),
+                unpack_list(cast(str, i[3])),
             )
             for i in db.raw_execute(
                 "SELECT trip_id, extra_fields_json->>'destinations', extra_fields_json->>'previous', "
@@ -256,7 +258,3 @@ class GenerateBlocks(Task):
             "FROM stop_times WHERE trip_id = ?",
             (dst, src),
         )
-
-
-def _split(x: str, separator: str = ";") -> list[str]:
-    return x.split(separator) if x else []

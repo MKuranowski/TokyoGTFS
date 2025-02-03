@@ -9,6 +9,8 @@ from impuls import DBConnection, Task, TaskRuntime
 from impuls.model import Agency, Calendar, Date, Route, Stop, StopTime, TimePoint, Translation, Trip
 from impuls.tools.strings import find_non_conflicting_id
 
+from .util import compact_json, pack_list
+
 ZIP_FILE_PREFIX = "mini-tokyo-3d-master/data"
 PREVIOUS_DAY_CUTOFF = TimePoint(hours=3)
 DAY = 86_400
@@ -254,14 +256,14 @@ class LoadSchedules(Task):
                     calendar_id=calendar_id,
                     short_name=short_name,
                     direction=direction,
-                    extra_fields_json=_compact_json(
+                    extra_fields_json=compact_json(
                         {
                             "train_type": i["y"],
                             "realtime_trip_id": i.get("t", ""),
                             "vehicle_kind": i.get("v", ""),
-                            "destinations": ";".join(i.get("ds", [])),
-                            "previous": ";".join(i.get("pt", [])),
-                            "next": ";".join(i.get("nt", [])),
+                            "destinations": pack_list(i.get("ds", [])),
+                            "previous": pack_list(i.get("pt", [])),
+                            "next": pack_list(i.get("nt", [])),
                         }
                     ),
                 )
@@ -324,10 +326,6 @@ def _load_json_from_zip(zip: ZipFile, filename: str) -> Any:
 
 def _prepend_with_number(number: str, name: str) -> str:
     return f"{number} {name}" if number else name
-
-
-def _compact_json(obj: Any) -> str:
-    return json.dumps(obj, indent=None, separators=(",", ":"))
 
 
 def _parse_time(x: str) -> TimePoint:
