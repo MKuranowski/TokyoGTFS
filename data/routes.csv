@@ -1,0 +1,158 @@
+agency,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
+JR-East,JR-East.Chuo,rail,CO,中央本線,Chuo Line,주오 본선,中央本线,中央本線,0C7FC7
+JR-East,JR-East.ChuoRapid,rail,JC,中央線快速,Chuo Rapid Line,주오 선 쾌속,中央线快速,中央線快速,FF5C1E
+JR-East,JR-East.ChuoSobuLocal,rail,JB,中央・総武各駅停車,Chuo Sobu Local Line,주오·소부 각역정차,中央·总武各站停车,中央·總武各站停車,FFDD3A
+JR-East,JR-East.Hachiko,rail,,八高線,Hachiko Line,하치코 선,八高线,八高線,A8A39D
+JR-East,JR-East.Ito,rail,JT,伊東線,Ito Line,이토 선,伊东线,伊東線,FF8C27
+JR-East,JR-East.Itsukaichi,rail,JC,五日市線,Itsukaichi Line,이쓰카이치 선,五日市线,五日市線,FF5C1E
+JR-East,JR-East.Joban,rail,,常磐線,Joban Line,조반 선,常磐线,常磐線,0C7FC7
+JR-East,JR-East.JobanLocal,rail,JL,常磐線各駅停車,Joban Local Line,조반 선 각역정차,常磐线各站停车,常磐線各站停車,9B9C9F
+JR-East,JR-East.JobanRapid,rail,JJ,常磐線快速,Joban Rapid Line,조반 선 쾌속,常磐线快速,常磐線快速,31B86A
+JR-East,JR-East.Kashima,rail,,鹿島線,Kashima Line,가시마 선,鹿岛线,鹿島線,C56E2E
+JR-East,JR-East.Kawagoe,rail,,川越線(川越-高麗川間),Kawagoe Line,가와고에 선,川越线,川越線,A8A39D
+JR-East,JR-East.KeihinTohokuNegishi,rail,JK,京浜東北線・根岸線,Keihin-Tohoku-Negishi Line,게이힌 도호쿠 선·네기시 선,京滨东北线·根岸线,京濱東北線·根岸線,00BEEB
+JR-East,JR-East.Keiyo,rail,JE,京葉線,Keiyo Line,게이요 선,京叶线,京葉線,E22C26
+JR-East,JR-East.KeiyoFutamataBranch,rail,JM,武蔵野線,Musashino Line,무사시노 선,武藏野线,武藏野線,FF5C1E
+JR-East,JR-East.KeiyoKoyaBranch,rail,JM,武蔵野線,Musashino Line,무사시노 선,武藏野线,武藏野線,FF5C1E
+JR-East,JR-East.Kururi,rail,,久留里線,Kururi Line,구루리 선,久留里线,久留里線,00B5AD
+JR-East,JR-East.Mito,rail,,水戸線,Mito Line,미토 선,水户线,水戶線,0C7FC7
+JR-East,JR-East.Musashino,rail,JM,武蔵野線,Musashino Line,무사시노 선,武藏野线,武藏野線,FF5C1E
+JR-East,JR-East.MusashinoKunitachiBranch,rail,JM,武蔵野線,Musashino Line,무사시노 선,武藏野线,武藏野線,FF5C1E
+JR-East,JR-East.MusashinoNishiUrawaBranch,rail,JM,武蔵野線,Musashino Line,무사시노 선,武藏野线,武藏野線,FF5C1E
+JR-East,JR-East.MusashinoOmiyaBranch,rail,JM,武蔵野線,Musashino Line,무사시노 선,武藏野线,武藏野線,FF5C1E
+JR-East,JR-East.Nambu,rail,JN,南武線,Nambu Line,난부 선,南武线,南武線,FFDD3A
+JR-East,JR-East.NambuBranch,rail,JN,南武線浜川崎支線,Nambu Branch Line,난부 선 하마카와사키 지선,南武线滨川崎支线,南武線濱川崎支線,FFDD3A
+JR-East,JR-East.Narita,rail,,成田線,Narita Line,나리타 선,成田线,成田線,31B86A
+JR-East,JR-East.NaritaAbikoBranch,rail,,成田線我孫子支線,Narita Abiko Branch Line,나리타 선 아비코 지선,成田线我孙子支线,成田線我孫子支線,31B86A
+JR-East,JR-East.NaritaAirportBranch,rail,,成田線空港支線,Narita Airport Branch Line,나리타 선 공항 지선,成田线机场支线,成田線機場支線,31B86A
+JR-East,JR-East.Ome,rail,JC,青梅線,Ome Line,오메 선,青梅线,青梅線,FF5C1E
+JR-East,JR-East.OsakiBranch,rail,,大崎支線,Osaki Branch Line,오사키 지선,大崎支线,大崎支線,FF8C27
+JR-East,JR-East.Ryomo,rail,,両毛線,Ryomo Line,료모 선,两毛线,兩毛線,FFDD3A
+JR-East,JR-East.Sagami,rail,,相模線,Sagami Line,사가미 선,相模线,相模線,009793
+JR-East,JR-East.SaikyoKawagoe,rail,JA,埼京線・川越線,Saikyo-Kawagoe Line,사이쿄 선·가와고에 선,埼京线·川越线,埼京線·川越線,2DBC8F
+JR-East,JR-East.ShonanShinjuku,rail,JS,湘南新宿ライン,Shonan-Shinjuku Line,쇼난 신주쿠 라인,湘南新宿线,湘南新宿線,FA2D18
+JR-East,JR-East.Sobu,rail,,総武本線,Sobu Line,소부 본선,总武本线,總武本線,0C7FC7
+JR-East,JR-East.SobuRapid,rail,JO,総武快速線,Sobu Rapid Line,소부 쾌속선,总武快速线,總武快速線,0C7FC7
+JR-East,JR-East.SotetsuDirect,rail,,相鉄直通線,Sotetsu Direct Connection Line,소테쓰 직통 선,相铁直通线,相鐵直通線,2DBC8F
+JR-East,JR-East.Sotobo,rail,,外房線,Sotobo Line,소토보 선,外房线,外房線,FF5C1E
+JR-East,JR-East.Takasaki,rail,JU,高崎線,Takasaki Line,다카사키 선,高崎线,高崎線,FF8C27
+JR-East,JR-East.Togane,rail,,東金線,Togane Line,도가네 선,东金线,東金線,FF8C27
+JR-East,JR-East.Tokaido,rail,JT,東海道線,Tokaido Line,도카이도 선,东海道线,東海道線,FF8C27
+JR-East,JR-East.TokaidoFreight,rail,,東海道貨物線,Tokaido Freight Line,도카이도 화물선,东海道货物线,東海道貨物線,0C7FC7
+JR-East,JR-East.Tsurumi,rail,JI,鶴見線,Tsurumi Line,쓰루미 선,鹤见线,鶴見線,FFDD3A
+JR-East,JR-East.TsurumiOkawaBranch,rail,JI,鶴見線大川支線,Tsurumi Okawa Branch Line,쓰루미 선 오카와 지선,鹤见线大川支线,鶴見線大川支線,FFDD3A
+JR-East,JR-East.TsurumiUmiShibauraBranch,rail,JI,鶴見線海芝浦支線,Tsurumi Umi Shibaura Branch Line,쓰루미 선 우미시바우라 지선,鹤见线海芝浦支线,鶴見線海芝浦支線,FFDD3A
+JR-East,JR-East.Uchibo,rail,,内房線,Uchibo Line,우치보 선,内房线,內房線,00BEEB
+JR-East,JR-East.Utsunomiya,rail,JU,宇都宮線,Utsunomiya Line,우쓰노미야 선,宇都宫线,宇都宮線,FF8C27
+JR-East,JR-East.Yamanote,rail,JY,山手線,Yamanote Line,야마노테 선,山手线,山手線,80C747
+JR-East,JR-East.YamanoteFreight,rail,,山手貨物線,Yamanote Freight Line,야마노테 화물선,山手货物线,山手貨物線,0C7FC7
+JR-East,JR-East.Yokohama,rail,JH,横浜線,Yokohama Line,요코하마 선,横滨线,橫濱線,80C747
+JR-East,JR-East.Yokosuka,rail,JO,横須賀線,Yokosuka Line,요코스카 선,横须贺线,橫須賀線,0C7FC7
+TokyoMetro,TokyoMetro.Chiyoda,metro,C,千代田線,Chiyoda Line,치요다선,千代田线,千代田線,00BB85
+TokyoMetro,TokyoMetro.Fukutoshin,metro,F,副都心線,Fukutoshin Line,후쿠토신선,副都心线,副都心線,9C5E31
+TokyoMetro,TokyoMetro.Ginza,metro,G,銀座線,Ginza Line,긴자선,银座线,銀座線,FF9500
+TokyoMetro,TokyoMetro.Hanzomon,metro,Z,半蔵門線,Hanzomon Line,한조몬선,半藏门线,半藏門線,8F76D6
+TokyoMetro,TokyoMetro.Hibiya,metro,H,日比谷線,Hibiya Line,히비야선,日比谷线,日比谷線,B5B5AC
+TokyoMetro,TokyoMetro.Marunouchi,metro,M,丸ノ内線,Marunouchi Line,마루노우치선,丸之内线,丸之内線,F62E36
+TokyoMetro,TokyoMetro.MarunouchiBranch,metro,Mb,丸ノ内線支線,Marunouchi Branch Line,마루노우치선 지선,丸之内线支线,丸之內線支線,F62E36
+TokyoMetro,TokyoMetro.Namboku,metro,N,南北線,Namboku Line,난보쿠선,南北线,南北線,00AC9B
+TokyoMetro,TokyoMetro.Tozai,metro,T,東西線,Tozai Line,도자이선,东西线,東西線,009BBF
+TokyoMetro,TokyoMetro.Yurakucho,metro,Y,有楽町線,Yurakucho Line,유라쿠초선,有乐町线,有樂町線,C1A470
+Toei,Toei.Arakawa,tram,SA,東京さくらトラム（都電荒川線）,Tokyo Sakura Tram (Arakawa Line),도쿄 사쿠라 트램 (아라카와 선),东京樱电 (荒川线),東京櫻花 (荒川線),EE86A7
+Toei,Toei.Asakusa,metro,A,浅草線,Asakusa Line,아사쿠사 선,浅草线,淺草線,EC6E65
+Toei,Toei.Mita,metro,I,三田線,Mita Line,미타 선,三田线,三田線,006AB8
+Toei,Toei.NipporiToneri,metro,NT,日暮里・舎人ライナー,Nippori-Toneri Liner,닛포리·도네리 라이너,日暮里-舍人线,日暮里-舍人線,E43081
+Toei,Toei.Oedo,metro,E,大江戸線,Oedo Line,오에도 선,大江户线,大江戶線,CE045B
+Toei,Toei.Shinjuku,metro,S,新宿線,Shinjuku Line,신주쿠 선,新宿线,新宿線,B0BF1E
+YokohamaMunicipal,YokohamaMunicipal.Blue,metro,B,ブルーライン,Blue Line,블루 라인,蓝线,藍線,093F86
+YokohamaMunicipal,YokohamaMunicipal.Green,metro,G,グリーンライン,Green Line,그린 라인,绿线,綠線,00A15A
+Tokyu,Tokyu.DenEnToshi,rail,DT,田園都市線,Den-En-Toshi Line,덴엔토시 선,田园都市线,田園都市線,20A288
+Tokyu,Tokyu.Ikegami,rail,IK,池上線,Ikegami Line,이케가미 선,池上线,池上線,EE86A7
+Tokyu,Tokyu.Kodomonokuni,rail,KD,こどもの国線,Kodomonokuni Line,고도모노쿠니 선,儿童之国线,兒童之國線,0068B7
+Tokyu,Tokyu.Meguro,rail,ME,目黒線,Meguro Line,메구로 선,目黑线,目黑線,009CD2
+Tokyu,Tokyu.Oimachi,rail,OM,大井町線,Oimachi Line,오이마치 선,大井町线,大井町線,F18C43
+Tokyu,Tokyu.Setagaya,tram,SG,世田谷線,Setagaya Line,세타가야 선,世田谷线,世田谷線,FCC70D
+Tokyu,Tokyu.TokyuShinYokohama,rail,SH,東急新横浜線,Tokyu-Shin-Yokohama Line,도큐 신요코하마 선,东急新横滨线,東急新橫濱線,890D84
+Tokyu,Tokyu.TokyuTamagawa,rail,TM,東急多摩川線,Tokyu-Tamagawa Line,도큐 다마가와 선,东急多摩川线,東急多摩川線,AE0378
+Tokyu,Tokyu.Toyoko,rail,TY,東横線,Toyoko Line,도요코 선,东横线,東橫線,DA0442
+Tobu,Tobu.Daishi,rail,TS,大師線,Daishi Line,다이시선,大师线,大師線,006CBB
+Tobu,Tobu.Isesaki,rail,TI,伊勢崎線,Isesaki Line,이세사키선,伊势崎线,伊勢崎線,E71212
+Tobu,Tobu.JRTobuConnection,rail,TN,日光線,Nikko Line,닛코선,日光线,日光線,F5A400
+Tobu,Tobu.Kameido,rail,TS,亀戸線,Kameido Line,가메이도선,龟户线,龜戶線,006CBB
+Tobu,Tobu.Kinugawa,rail,TN,鬼怒川線,Kinugawa Line,기누가와선,鬼怒川线,鬼怒川線,F5A400
+Tobu,Tobu.Kiryu,rail,TI,桐生線,Kiryu Line,기류선,桐生线,桐生線,E71212
+Tobu,Tobu.Koizumi,rail,TI,小泉線,Koizumi Line,고이즈미선,小泉线,小泉線,E71212
+Tobu,Tobu.KoizumiBranch,rail,TI,小泉線(東小泉-太田),Koizumi Line(Higashi-koizumi-Ota),고이즈미선(히가시코이즈미-오타),小泉线(东小泉-太田),小泉線(東小泉-太田),E71212
+Tobu,Tobu.Nikko,rail,TN,日光線,Nikko Line,닛코선,日光线,日光線,F5A400
+Tobu,Tobu.Ogose,rail,TJ,越生線,Ogose Line,오고세선,越生线,越生線,00408F
+Tobu,Tobu.Sano,rail,TI,佐野線,Sano Line,사노선,佐野线,佐野線,E71212
+Tobu,Tobu.TobuSkytree,rail,TS,東武スカイツリーライン,TOBU SKYTREE Line,도부 스카이트리 라인,东武晴空塔线,東武晴空塔線,006CBB
+Tobu,Tobu.TobuSkytreeBranch,rail,TS,東武スカイツリーライン,TOBU SKYTREE Line,도부 스카이트리 라인,东武晴空塔线,東武晴空塔線,006CBB
+Tobu,Tobu.TobuUrbanPark,rail,TD,東武アーバンパークライン,TOBU URBAN PARK Line,도부 어번 파크 라인,东武都市公园线,東武都市公園線,3EB5E6
+Tobu,Tobu.Tojo,rail,TJ,東上線,Tojo Line,도조선,东上线,東上線,00408F
+Tobu,Tobu.Utsunomiya,rail,TN,宇都宮線,Utsunomiya Line,우쓰노미야선,宇都宫线,宇都宮線,F5A400
+Odakyu,Odakyu.Enoshima,rail,OE,江ノ島線,Enoshima Line,에노시마 선,江之岛线,江之島線,0483C8
+Odakyu,Odakyu.Odawara,rail,OH,小田原線,Odawara Line,오다와라 선,小田原线,小田原線,0483C8
+Odakyu,Odakyu.Tama,rail,OT,多摩線,Tama Line,다마 선,多摩线,多摩線,0483C8
+Keio,Keio.Dobutsuen,rail,KO,動物園線,Dōbutsuen Line,도부쓰엔선,动物园线,動物園線,D5007F
+Keio,Keio.Inokashira,rail,IN,井の頭線,Inokashira Line,이노카시라선,井之头线,井之頭線,103675
+Keio,Keio.Keibajo,rail,KO,競馬場線,Keibajō Line,게이바조선,竞马场线,競馬場線,D5007F
+Keio,Keio.Keio,rail,KO,京王線,Keiō Line,게이오선,京王线,京王線,D5007F
+Keio,Keio.KeioNew,rail,KO,京王新線,Keiō New Line,게이오신선,京王新线,京王新線,D5007F
+Keio,Keio.Sagamihara,rail,KO,相模原線,Sagamihara Line,사가미하라선,相模原线,相模原線,D5007F
+Keio,Keio.Takao,rail,KO,高尾線,Takao Line,다카오선,高尾线,高尾線,D5007F
+Seibu,Seibu.Haijima,rail,SS,拝島線,Haijima Line,하이지마 선,拜岛线,拜島線,00A8C0
+Seibu,Seibu.Ikebukuro,rail,SI,池袋線,Ikebukuro Line,이케부쿠로 선,池袋线,池袋線,F07B00
+Seibu,Seibu.Kokubunji,rail,SK,国分寺線,Kokubunji Line,고쿠분지 선,国分寺线,國分寺線,35B55C
+Seibu,Seibu.S-Fukutoshin,rail,SI,池袋線,Ikebukuro Line,이케부쿠로 선,池袋线,池袋線,F07B00
+Seibu,Seibu.S-Yurakucho,rail,SI,池袋線,Ikebukuro Line,이케부쿠로 선,池袋线,池袋線,F07B00
+Seibu,Seibu.Sayama,rail,SI,狭山線,Sayama Line,사야마 선,狭山线,狹山線,F07B00
+Seibu,Seibu.SeibuChichibu,rail,SI,西武秩父線,Seibu-Chichibu Line,세이부 지치부 선,西武秩父线,西武秩父線,F07B00
+Seibu,Seibu.SeibuChichibuBranch,rail,SI,西武秩父線,Seibu-Chichibu Line,세이부 지치부 선,西武秩父线,西武秩父線,F07B00
+Seibu,Seibu.SeibuYurakucho,rail,SI,西武有楽町線,Seibu-Yurakucho Line,세이부 유라쿠초 선,西武有乐町线,西武有樂町線,F07B00
+Seibu,Seibu.Seibuen,rail,SK,西武園線,Seibuen Line,세이부엔 선,西武园线,西武園線,35B55C
+Seibu,Seibu.Shinjuku,rail,SS,新宿線,Shinjuku Line,신주쿠 선,新宿线,新宿線,00A8C0
+Seibu,Seibu.Tamagawa,rail,SW,多摩川線,Tamagawa Line,다마가와 선,多摩川线,多摩川線,F17D1F
+Seibu,Seibu.Tamako,rail,ST,多摩湖線,Tamako Line,다마코 선,多摩湖线,多摩湖線,F7AC28
+Seibu,Seibu.Toshima,rail,SI,豊島線,Toshima Line,도시마 선,丰岛线,豐島線,F07B00
+Seibu,Seibu.Yamaguchi,rail,SY,山口線,Yamaguchi Line,야마구치 선,山口线,山口線,ED463E
+Keikyu,Keikyu.Airport,rail,KK,空港線,Airport Line,공항선,机场线,機場線,00BFFF
+Keikyu,Keikyu.Daishi,rail,KK,大師線,Daishi Line,다이시선,大师线,大師線,00BFFF
+Keikyu,Keikyu.Kurihama,rail,KK,久里浜線,Kurihama Line,구리하마선,久里滨线,久里濱線,00BFFF
+Keikyu,Keikyu.Main,rail,KK,京急本線,Keikyū Main Line,게이큐 본선,京急本线,京急本線,00BFFF
+Keikyu,Keikyu.Zushi,rail,KK,逗子線,Zushi Line,즈시선,逗子线,逗子線,00BFFF
+Keisei,Keisei.Chiba,rail,KS,千葉線,Chiba Line,지바 선,千叶线,千葉線,005AAA
+Keisei,Keisei.Chihara,rail,KS,千原線,Chihara Line,지하라 선,千原线,千原線,005AAA
+Keisei,Keisei.HigashiNarita,rail,KS,東成田線,Higashi-Narita Line,히가시나리타 선,东成田线,東成田線,005AAA
+Keisei,Keisei.Kanamachi,rail,KS,金町線,Kanamachi Line,가나마치 선,金町线,金町線,005AAA
+Keisei,Keisei.Main,rail,KS,京成本線,Keisei Main Line,게이세이 본선,京成本线,京成本線,005AAA
+Keisei,Keisei.NaritaSkyAccess,rail,KS,成田スカイアクセス線,Narita Sky Access Line,나리타 스카이액세스선,成田Sky Access线,成田Sky Access線,FF8620
+Keisei,Keisei.Oshiage,rail,KS,押上線,Oshiage Line,오시아게 선,押上线,押上線,005AAA
+Sotetsu,Sotetsu.Izumino,rail,SO,いずみ野線,Izumino Line,이즈미노 선,泉野线,泉野線,0072C2
+Sotetsu,Sotetsu.Main,rail,SO,相鉄本線,Sotetsu Main Line,소테쓰 본선,相铁本线,相鐵本線,0072C2
+Sotetsu,Sotetsu.SotetsuShinYokohama,rail,SO,相鉄新横浜線,Sotetsu Shin-Yokohama Line,소테쓰 신요코하마 선,相铁新横滨线,相鐵新橫濱線,0072C2
+TWR,TWR.Rinkai,rail,R,りんかい線,Rinkai Line,린카이선,临海线,臨海線,38257D
+KantoRailway,KantoRailway.Joso,rail,,常総線,Joso Line,조소 선,常总线,常總線,0000CD
+KantoRailway,KantoRailway.Ryugasaki,rail,,竜ヶ崎線,Ryugasaki Line,류가사키 선,龙崎线,龍崎線,0000CD
+Yurikamome,Yurikamome.Yurikamome,rail,U,ゆりかもめ,Yurikamome line,유리카모메선,百合鸥线,百合鷗線,0E62B9
+ShinKeisei,ShinKeisei.ShinKeisei,rail,SL,新京成線,Shin-Keisei Line,신케이세이 선,新京成线,新京成線,FF69B4
+Minatomirai,Minatomirai.Minatomirai,rail,MM,みなとみらい線,Minatomirai Line,미나토미라이 선,港未来线,港未來線,00469C
+SaitamaRailway,SaitamaRailway.SaitamaRailway,rail,SR,埼玉高速鉄道線,Saitama Railway Line,사이타마 고속 철도선,埼玉高速铁道线,埼玉高速鐵道線,345CAA
+Hokuso,Hokuso.Hokuso,rail,HS,北総線,Hokuso Line,호쿠소 선,北总线,北總線,00BFFF
+ToyoRapid,ToyoRapid.ToyoRapid,rail,TR,東葉高速線,Toyo Rapid Line,도요 고속선,东叶高速线,東葉高速線,0AAA3C
+Shibayama,Shibayama.Shibayama,rail,SR,芝山鉄道線,Shibayama Line,시바야마 철도선,芝山铁道线,芝山鐵道線,008459
+Chichibu,Chichibu.Chichibu,rail,CR,秩父本線,Chichibu Main Line,지치부 본선,秩父本线,秩父本線,4169E1
+MIR,MIR.TsukubaExpress,rail,TX,つくばエクスプレス,Tsukuba Express Line,츠쿠바 익스프레스선,筑波特快线,筑波快線,000084
+TamaMonorail,TamaMonorail.TamaMonorail,rail,TT,多摩モノレール,Tama Monorail Line,다마 모노레일,多摩单轨电车,多摩單軌電車,22625E
+ShonanMonorail,ShonanMonorail.Enoshima,monorail,SMR,江の島線,Enoshima Line,에노시마 선,江之岛线,江之島線,B30000
+TokyoMonorail,TokyoMonorail.HanedaAirport,monorail,MO,羽田空港線,Haneda Airport Line,하네다 공항선,羽田机场线,羽田機場線,000080
+ChibaMonorail,ChibaMonorail.Line1,monorail,CM1,千葉モノレール1号線,Chiba Monorail Line 1,지바 모노레일 1호선,千叶单轨电车1号线,千葉單軌電車1號線,008EB2
+ChibaMonorail,ChibaMonorail.Line2,monorail,CM2,千葉モノレール2号線,Chiba Monorail Line 2,지바 모노레일 2호선,千叶单轨电车2号线,千葉單軌電車2號線,008EB2
+Ryutetsu,Ryutetsu.Nagareyama,rail,RN,流山線,Nagareyama Line,나가레야마 선,流山线,流山線,D64022
+EER,EER.Enoshima,tram,EN,江ノ島電鉄線,Enoshima Electric Railway Line,에노시마 전철선,江之岛电铁线,江之島電鐵線,0C6346
+YSL,YSL.KanazawaSeasideLine,rail,,金沢シーサイドライン,Kanazawa Seaside Line,가나자와 시사이드 라인,金泽海岸线,金澤海岸線,F68B1E
+Isumi,Isumi.Isumi,rail,,いすみ線,Isumi Line,이스미 선,夷隅线,夷隅線,FFD400
+SNUT,SNUT.NewShuttle,rail,NS,ニューシャトル,New Shuttle,뉴셔틀,New Shuttle,New Shuttle,FFD400
+Yamaman,Yamaman.Yukarigaoka,rail,,ユーカリが丘線,Yukarigaoka Line,유카리가오카 선,有加利丘线,有加利丘線,00BA6E
+Kominato,Kominato.Kominato,rail,,小湊鉄道線,Kominato Line,고미나토 철도선,小凑铁道线,小湊鐵道線,9D1800
+JR-Central,JR-Central.Tokaido,rail,CA,東海道線,Tokaido Line,도카이도 선,东海道线,東海道線,F68719

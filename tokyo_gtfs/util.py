@@ -21,3 +21,11 @@ def unpack_list(packed: str) -> list[str]:
 
 def compact_json(obj: Any) -> str:
     return json.dumps(obj, indent=None, separators=(",", ":"))
+
+
+def text_color_for(color: str) -> str:
+    r = int(color[0:2], base=16)
+    g = int(color[2:4], base=16)
+    b = int(color[4:6], base=16)
+    yiq = 0.299 * r + 0.587 * g + 0.114 * b
+    return "000000" if yiq > 128 else "FFFFFF"

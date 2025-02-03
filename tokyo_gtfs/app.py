@@ -1,7 +1,8 @@
 from argparse import Namespace
 
-from impuls import App, HTTPResource, Pipeline, PipelineOptions
+from impuls import App, HTTPResource, LocalResource, Pipeline, PipelineOptions
 
+from .curate import CurateAgencies, CurateRoutes
 from .generate_blocks import GenerateBlocks
 from .generate_headsigns import GenerateHeadsigns
 from .load_schedules import LoadSchedules
@@ -15,9 +16,9 @@ class TokyoGTFS(App):
                 LoadSchedules(),
                 GenerateBlocks(),
                 GenerateHeadsigns(),
+                CurateAgencies(),
+                CurateRoutes(),
                 # TODO
-                # CurateAgencies(),
-                # CurateRoutes(),
                 # AddAttributions(),
                 # AddFeedInfo(),
                 # RemoveUnusedEntities(),
@@ -27,5 +28,7 @@ class TokyoGTFS(App):
                 "mini-tokyo-3d.zip": HTTPResource.get(
                     "https://github.com/nagix/mini-tokyo-3d/archive/refs/heads/master.zip"
                 ),
+                "agencies.csv": LocalResource("data/agencies.csv"),
+                "routes.csv": LocalResource("data/routes.csv"),
             },
         )
