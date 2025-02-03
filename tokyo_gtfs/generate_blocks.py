@@ -90,6 +90,8 @@ class GenerateBlocks(Task):
 
     def solve(self, db: DBConnection, root: BlockNode) -> None:
         linked_nodes = self.find_all_linked_nodes(root)
+        if len(linked_nodes) <= 1:
+            return  # Nothing linked - don't assign a block_id
         blocks = self.find_all_blocks(linked_nodes)
         self.assign_blocks(db, blocks)
 
