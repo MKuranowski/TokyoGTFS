@@ -18,9 +18,12 @@ class TokyoGTFS(App):
                 LoadSchedules(),
                 GenerateBlocks(),
                 GenerateHeadsigns(),
+                # TODO
+                # FixYamanoteLineHeadsigns(),
+                # SeparateNaritaAirportLinks(),
                 CurateAgencies(),
                 CurateRoutes(),
-                # TODO
+                # TODO:
                 # AddAttributions(),
                 # AddFeedInfo(),
                 # RemoveUnusedEntities(),
