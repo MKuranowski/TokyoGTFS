@@ -2,6 +2,7 @@ from argparse import Namespace
 
 from impuls import App, HTTPResource, Pipeline, PipelineOptions
 
+from .generate_blocks import GenerateBlocks
 from .load_schedules import LoadSchedules
 
 
@@ -11,8 +12,8 @@ class TokyoGTFS(App):
             options=options,
             tasks=[
                 LoadSchedules(),
+                GenerateBlocks(),
                 # TODO
-                # GenerateBlocks(),
                 # GenerateHeadsigns(),
                 # CurateAgencies(),
                 # CurateRoutes(),
