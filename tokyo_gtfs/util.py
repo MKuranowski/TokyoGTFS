@@ -1,5 +1,19 @@
 import json
+from dataclasses import dataclass
 from typing import Any
+
+
+@dataclass
+class Translation:
+    ja: str = ""
+    en: str = ""
+    ko: str = ""
+    zh_hans: str = ""
+    zh_hant: str = ""
+
+    @property
+    def default(self) -> str:
+        return f"{self.ja} {self.en}"
 
 
 def combine_name(ja: str, en: str) -> str:

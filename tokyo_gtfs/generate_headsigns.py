@@ -3,20 +3,7 @@ from typing import cast
 
 from impuls import DBConnection, Task, TaskRuntime
 
-from .util import split_name, unpack_list
-
-
-@dataclass
-class Translation:
-    ja: str = ""
-    en: str = ""
-    ko: str = ""
-    zh_hans: str = ""
-    zh_hant: str = ""
-
-    @property
-    def default(self) -> str:
-        return f"{self.ja} {self.en}"
+from .util import Translation, split_name, unpack_list
 
 
 @dataclass

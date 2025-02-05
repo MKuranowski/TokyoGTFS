@@ -4,6 +4,7 @@ from impuls import App, HTTPResource, LocalResource, Pipeline, PipelineOptions
 from impuls.tasks import SaveGTFS
 
 from .curate import CurateAgencies, CurateRoutes
+from .fix_yamanote_headsigns import FixYamanoteLineHeadsigns
 from .generate_blocks import GenerateBlocks
 from .generate_headsigns import GenerateHeadsigns
 from .gtfs import GTFS_HEADERS
@@ -18,9 +19,8 @@ class TokyoGTFS(App):
                 LoadSchedules(),
                 GenerateBlocks(),
                 GenerateHeadsigns(),
-                # TODO
-                # FixYamanoteLineHeadsigns(),
-                # SeparateNaritaAirportLinks(),
+                FixYamanoteLineHeadsigns(),
+                # TODO: SeparateNaritaAirportLinks(),
                 CurateAgencies(),
                 CurateRoutes(),
                 # TODO:

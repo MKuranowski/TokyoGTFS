@@ -33,7 +33,13 @@ class LoadSchedules(Task):
             r.db.transaction(),
         ):
             self.create_calendars(r.db)
+
             self.load_railways(r.db, zip)
+            assert self.direction_map["JR-East.Yamanote"] == {
+                "OuterLoop": Trip.Direction.OUTBOUND,
+                "InnerLoop": Trip.Direction.INBOUND,
+            }  # Ensure that Yamanote line directions are consistent for headsign fixing
+
             self.load_stations(r.db, zip)
             self.load_station_groups(r.db, zip)
             self.load_train_types(r.db, zip)
