@@ -10,6 +10,7 @@ GTFS_HEADERS = {
         "agency_id",
         "route_id",
         "route_short_name",
+        "route_long_name",
         "route_type",
         "route_color",
         "route_text_color",
@@ -50,5 +51,19 @@ GTFS_HEADERS = {
         "stop_id",
         "arrival_time",
         "departure_time",
+    ),
+    "attributions.txt": (
+        "attribution_id",
+        "organization_name",
+        "attribution_url",
+        "is_producer",
+        "is_operator",
+        "is_authority",
+        "is_data_source",
+    ),
+    "feed_info.txt": (
+        "feed_publisher_name",
+        "feed_publisher_url",
+        "feed_lang",
     ),
 }
