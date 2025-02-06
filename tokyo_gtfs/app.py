@@ -20,7 +20,7 @@ class TokyoGTFS(App):
                 GenerateBlocks(),
                 GenerateHeadsigns(),
                 FixYamanoteLineHeadsigns(),
-                # TODO: SeparateNaritaAirportLinks(),
+                # TODO: SeparateAirportLinks(),
                 CurateAgencies(),
                 CurateRoutes(),
                 # TODO:

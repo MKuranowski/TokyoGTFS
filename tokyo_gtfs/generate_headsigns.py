@@ -5,6 +5,14 @@ from impuls import DBConnection, Task, TaskRuntime
 
 from .util import Translation, split_name, unpack_list
 
+NARITA_AIRPORT_HEADSIGN_NAME = Translation(
+    ja="成田空港",
+    en="Narita Airport",
+    ko="나리타 공항",
+    zh_hans="成田机场",
+    zh_hant="成田機場",
+)
+
 
 @dataclass
 class Train:
@@ -56,6 +64,11 @@ class GenerateHeadsigns(Task):
         )
         for row in select_translation:
             stop_id = cast(str, row[0])
+
+            if stop_id.endswith(".NaritaAirportTerminal1"):
+                names[stop_id] = NARITA_AIRPORT_HEADSIGN_NAME
+                continue
+
             name = names.get(stop_id)
             if not name:
                 continue
