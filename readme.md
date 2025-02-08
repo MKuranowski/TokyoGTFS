@@ -40,11 +40,11 @@ see <https://ckan.odpt.org/dataset/?tags=%E3%83%90%E3%82%B9-bus&res_format=GTFS%
 
 The script only creates GTFS for operators without GTFS feeds, but with ODPT JSON data; that is:
 
-- Tobu Bus,
-- Kanachu,
-- Kokusai Kogyo Bus,
+- ~~Tobu Bus~~ (missing stop positions),
+- ~~Kanachu~~ (missing stop positions),
+- ~~Kokusai Kogyo Bus~~ (missing stop positions),
 - Tokyu Bus,
-- Odakyu Bus,
+- ~~Odakyu Bus~~ (missing stop positions),
 - Sotetsu Bus.
 
 The data for those operators is very bare-bone, and thus the resulting GTFS is also quite bare-bone.
