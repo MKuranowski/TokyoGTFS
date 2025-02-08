@@ -72,3 +72,20 @@ As an alternative, TokyoGTFS also accepts Docker-style secret passing. Instead o
 and paths to those files can be set through the `TOKYO_ODPT_APIKEY_FILE` or
 `TOKYO_CHALLENGE_APIKEY_FILE` environment variables. Beware that the direct/non-file env variables
 take precedence.
+
+
+License
+-------
+
+TokyoGTFS is distributed under GNU GPL v3 (or any later version).
+
+    © Copyright 2025 Mikołaj Kuranowski
+
+    Impuls is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+
+    Impuls is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along with Impuls. If not, see http://www.gnu.org/licenses/.
+
+Except for files under the `data` directory, which are under the [CC0 license](https://creativecommons.org/public-domain/cc0/);
+released to the public domain.

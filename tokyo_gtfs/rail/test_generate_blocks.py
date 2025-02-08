@@ -1,3 +1,6 @@
+# © Copyright 2025 Mikołaj Kuranowski
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 from unittest import TestCase
 
 from .generate_blocks import BlockNode, GenerateBlocks
