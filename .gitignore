@@ -1,3 +1,4 @@
+.env
 *.pyc
 _impuls_workspace
 *.zip
