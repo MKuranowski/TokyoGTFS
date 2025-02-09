@@ -1,3 +1,6 @@
+# © Copyright 2025 Mikołaj Kuranowski
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 from collections.abc import Container, Mapping
 from typing import cast
 

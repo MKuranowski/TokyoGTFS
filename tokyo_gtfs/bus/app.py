@@ -10,8 +10,11 @@ from typing import Self
 
 from impuls import App, HTTPResource, LocalResource, Pipeline, PipelineOptions
 from impuls.errors import DataError, MultipleDataErrors
-from impuls.tasks import RemoveUnusedEntities
+from impuls.model import Attribution, FeedInfo
+from impuls.tasks import AddEntity, RemoveUnusedEntities, SaveGTFS
 
+from .curate_agencies import CurateAgencies
+from .gtfs import GTFS_HEADERS
 from .insert_dummy_agencies import InsertDummyAgencies
 from .load_calendars import LoadCalendars
 from .load_routes import LoadRoutes
@@ -31,8 +34,44 @@ class TokyoBusGTFS(App):
                 LoadTimetables(operators, "challenge_timetables.json"),
                 LoadCalendars("challenge_calendars.json"),
                 RemoveUnusedEntities(),
-                # TODO: CurateAgencies("bus_operators.csv")
-                # TODO: SaveGTFS(),
+                CurateAgencies("bus_operators.csv"),
+                AddEntity(
+                    task_name="AddAttribution1",
+                    entity=Attribution(
+                        id="1",
+                        organization_name=(
+                            "Schedules: Public Transportation Open Data Center "
+                            "(accuracy and integrity of data is not guaranteed; "
+                            "do not contact the ODPT or operators regarding this dataset)"
+                        ),
+                        is_producer=False,
+                        is_operator=False,
+                        is_authority=True,
+                        is_data_source=True,
+                        url="https://developer.odpt.org/challenge_license",
+                    ),
+                ),
+                AddEntity(
+                    task_name="AddAttribution2",
+                    entity=Attribution(
+                        id="2",
+                        organization_name="GTFS: Mikołaj Kuranowski",
+                        is_producer=True,
+                        is_operator=False,
+                        is_authority=True,
+                        is_data_source=True,
+                        url="https://github.com/MKuranowski/TokyoGTFS",
+                    ),
+                ),
+                AddEntity(
+                    task_name="AddFeedInfo",
+                    entity=FeedInfo(
+                        publisher_name="Mikołaj Kuranowski",
+                        publisher_url="https://mkuran.pl/gtfs/",
+                        lang="ja",
+                    ),
+                ),
+                SaveGTFS(GTFS_HEADERS, "tokyo_missing_bus.zip", ensure_order=True),
             ],
             resources={
                 "bus_operators.csv": LocalResource("data/bus_operators.csv"),
