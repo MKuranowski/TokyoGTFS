@@ -12,7 +12,7 @@ from impuls import DBConnection, Task, TaskRuntime
 from impuls.model import Agency, Calendar, Date, Route, Stop, StopTime, TimePoint, Translation, Trip
 from impuls.tools.strings import find_non_conflicting_id
 
-from .util import compact_json, pack_list
+from ..util import compact_json, pack_list
 
 ZIP_FILE_PREFIX = "mini-tokyo-3d-master/data"
 PREVIOUS_DAY_CUTOFF = TimePoint(hours=3)

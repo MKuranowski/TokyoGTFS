@@ -6,7 +6,7 @@ from typing import cast
 
 from impuls import Task, TaskRuntime
 
-from .util import json_items, strip_prefix
+from ..util import json_items, strip_prefix
 
 
 class LoadStops(Task):

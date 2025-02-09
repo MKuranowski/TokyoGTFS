@@ -6,7 +6,7 @@ from typing import Any, cast
 
 from impuls import DBConnection, Task, TaskRuntime
 
-from .util import json_items, strip_prefix
+from ..util import json_items, strip_prefix
 
 MINUTE = 60
 HOUR = 60 * MINUTE

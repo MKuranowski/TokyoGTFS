@@ -6,7 +6,7 @@ from impuls import DBConnection, Task, TaskRuntime
 from impuls.model import Date
 from impuls.tools.temporal import BoundedDateRange
 
-from .util import json_items, strip_prefix
+from ..util import json_items, strip_prefix
 
 KNOWN_CALENDARS = {
     "Everyday": 0b111_1111,

@@ -7,7 +7,7 @@ from impuls import Task, TaskRuntime
 from impuls.errors import DataError
 from impuls.model import Route
 
-from .util import text_color_for
+from ..util import text_color_for
 
 
 class CurateAgencies(Task):

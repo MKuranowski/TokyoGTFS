@@ -9,7 +9,7 @@ from typing import cast
 
 from impuls import DBConnection, Task, TaskRuntime
 
-from .util import unpack_list
+from ..util import unpack_list
 
 
 @dataclass

@@ -6,7 +6,7 @@ from typing import cast
 
 from impuls import DBConnection, Task, TaskRuntime
 
-from .util import Translation, split_name, unpack_list
+from ..util import Translation, split_name, unpack_list
 
 NARITA_AIRPORT_HEADSIGN_NAME = Translation(
     ja="成田空港",

@@ -2,8 +2,12 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import json
+from collections.abc import Generator
 from dataclasses import dataclass
 from typing import Any
+
+import ijson  # type: ignore
+from impuls.tools.types import StrPath
 
 
 @dataclass
@@ -36,6 +40,11 @@ def unpack_list(packed: str) -> list[str]:
     return packed.split(";") if packed else []
 
 
+def json_items(path: StrPath) -> Generator[Any, None, None]:
+    with open(path, "r", encoding="utf-8") as f:
+        yield from ijson.items(f, "item", use_float=True)
+
+
 def compact_json(obj: Any) -> str:
     return json.dumps(obj, indent=None, separators=(",", ":"))
 
@@ -46,3 +55,11 @@ def text_color_for(color: str) -> str:
     b = int(color[4:6], base=16)
     yiq = 0.299 * r + 0.587 * g + 0.114 * b
     return "000000" if yiq > 128 else "FFFFFF"
+
+
+def strip_prefix(x: str) -> str:
+    """
+    >>> strip_prefix("odpt.BusroutePattern:TobuBus.Take16.101010008720")
+    'TobuBus.Take16.101010008720'
+    """
+    return x.partition(":")[2]

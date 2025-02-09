@@ -6,7 +6,7 @@ from typing import Literal, cast
 
 from impuls import DBConnection, Task, TaskRuntime
 
-from .util import Translation
+from ..util import Translation
 
 
 @dataclass
