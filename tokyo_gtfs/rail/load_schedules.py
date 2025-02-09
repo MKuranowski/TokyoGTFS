@@ -2,12 +2,12 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import fnmatch
-import json
-from collections.abc import Iterable
+from collections.abc import Generator, Iterable
 from statistics import mean
 from typing import Any, cast
 from zipfile import ZipFile
 
+import ijson  # type: ignore
 from impuls import DBConnection, Task, TaskRuntime
 from impuls.model import Agency, Calendar, Date, Route, Stop, StopTime, TimePoint, Translation, Trip
 from impuls.tools.strings import find_non_conflicting_id
@@ -103,9 +103,8 @@ class LoadSchedules(Task):
         self.logger.debug("Loading railways.json")
 
         created_agencies = set[str]()
-        data = _load_json_from_zip(zip, f"{ZIP_FILE_PREFIX}/railways.json")
 
-        for i in data:
+        for i in _json_items_from_zip(zip, f"{ZIP_FILE_PREFIX}/railways.json"):
             route_id = cast(str, i["id"])
             agency_id = route_id.partition(".")[0]
 
@@ -121,9 +120,7 @@ class LoadSchedules(Task):
 
     def load_stations(self, db: DBConnection, zip: ZipFile) -> None:
         self.logger.debug("Loading stations.json")
-
-        data = _load_json_from_zip(zip, f"{ZIP_FILE_PREFIX}/stations.json")
-        for i in data:
+        for i in _json_items_from_zip(zip, f"{ZIP_FILE_PREFIX}/stations.json"):
             stop_id = cast(str, i["id"])
             if c := i.get("coord"):
                 lat = cast(float, c[1])
@@ -153,8 +150,7 @@ class LoadSchedules(Task):
         self.logger.debug("Loading station-groups.json")
 
         used_station_ids = set[str]()
-        data = _load_json_from_zip(zip, f"{ZIP_FILE_PREFIX}/station-groups.json")
-        for group in data:
+        for group in _json_items_from_zip(zip, f"{ZIP_FILE_PREFIX}/station-groups.json"):
             stop_ids = [cast(str, id) for sub_group in group for id in sub_group]
 
             id_base = stop_ids[0].rpartition(".")[2]
@@ -208,7 +204,6 @@ class LoadSchedules(Task):
 
     def load_train_types(self, db: DBConnection, zip: ZipFile) -> None:
         self.logger.debug("Loading train-types.json")
-        data = _load_json_from_zip(zip, f"{ZIP_FILE_PREFIX}/train-types.json")
         db.raw_execute_many(
             "INSERT INTO train_types (train_type_id, name_ja, name_en, name_ko, name_zh_hans, "
             "name_zh_hant) VALUES (?, ?, ?, ?, ?, ?)",
@@ -221,7 +216,7 @@ class LoadSchedules(Task):
                     i["title"].get("zh-Hans", ""),
                     i["title"].get("zh-Hant", ""),
                 )
-                for i in data
+                for i in _json_items_from_zip(zip, f"{ZIP_FILE_PREFIX}/train-types.json")
             ),
         )
 
@@ -231,9 +226,9 @@ class LoadSchedules(Task):
             f"{ZIP_FILE_PREFIX}/train-timetables/*.json",
         ):
             self.logger.debug("Loading train-timetables/%s", filename.rpartition("/")[2])
-            self.load_train_timetable(db, _load_json_from_zip(zip, filename))
+            self.load_train_timetable(db, _json_items_from_zip(zip, filename))
 
-    def load_train_timetable(self, db: DBConnection, data: Any) -> None:
+    def load_train_timetable(self, db: DBConnection, data: Iterable[Any]) -> None:
         for i in data:
             # Extract basic data
             trip_id = cast(str, i["id"])
@@ -328,9 +323,9 @@ class LoadSchedules(Task):
             return None
 
 
-def _load_json_from_zip(zip: ZipFile, filename: str) -> Any:
+def _json_items_from_zip(zip: ZipFile, filename: str) -> Generator[Any, None, None]:
     with zip.open(filename, "r") as f:
-        return json.load(f)
+        yield from ijson.items(f, "item", use_float=True)
 
 
 def _prepend_with_number(number: str, name: str) -> str:
