@@ -81,11 +81,20 @@ TokyoGTFS is distributed under GNU GPL v3 (or any later version).
 
     © Copyright 2025 Mikołaj Kuranowski
 
-    Impuls is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+    TokyoGTFS is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
 
-    Impuls is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+    TokyoGTFS is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License along with Impuls. If not, see http://www.gnu.org/licenses/.
+    You should have received a copy of the GNU General Public License along with TokyoGTFS. If not, see http://www.gnu.org/licenses/.
 
 Except for files under the `data` directory, which are under the [CC0 license](https://creativecommons.org/public-domain/cc0/);
 released to the public domain.
+
+The resulting railway GTFS is licensed under the [MIT License](https://github.com/nagix/mini-tokyo-3d/blob/master/LICENSE),
+with the following attribution: `Copyright (c) 2019-2025 Akihiko Kusanagi`.
+
+The resulting bus GTFS uses data from the Public Transportation Open Data Center, under its
+[Public Transportation Open Data Basic License](https://developer.odpt.org/terms/data_basic_license.html) and
+[Public Transportation Open Data Challenge Limited License](https://developer.odpt.org/challenge_license).
+This requires an attribution to the ODPT and a statement that accuracy and integrity of the data
+is not guaranteed and that users shall not contact ODPT and the operators about the data.
