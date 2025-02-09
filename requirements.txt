@@ -1,2 +1,3 @@
 impuls ~= 2.1
 ijson ~= 3.3
+holidays ~= 0.66

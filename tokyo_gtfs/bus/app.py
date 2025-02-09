@@ -10,8 +10,10 @@ from typing import Self
 
 from impuls import App, HTTPResource, LocalResource, Pipeline, PipelineOptions
 from impuls.errors import DataError, MultipleDataErrors
+from impuls.tasks import RemoveUnusedEntities
 
 from .insert_dummy_agencies import InsertDummyAgencies
+from .load_calendars import LoadCalendars
 from .load_routes import LoadRoutes
 from .load_stops import LoadStops
 from .load_timetables import LoadTimetables
@@ -27,9 +29,8 @@ class TokyoBusGTFS(App):
                 LoadRoutes(operators, "challenge_patterns.json"),
                 LoadStops(operators, "challenge_stops.json"),
                 LoadTimetables(operators, "challenge_timetables.json"),
-                # TODO: LoadCalendars("challenge_calendars.json"),
-                # TODO: RemoveEmptyCalendars(),
-                # TODO: RemoveUnusedEntities(),
+                LoadCalendars("challenge_calendars.json"),
+                RemoveUnusedEntities(),
                 # TODO: CurateAgencies("bus_operators.csv")
                 # TODO: SaveGTFS(),
             ],
