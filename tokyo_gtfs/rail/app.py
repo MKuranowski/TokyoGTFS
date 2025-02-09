@@ -27,7 +27,6 @@ class TokyoRailGTFS(App):
                 # TODO: MergeDuplicateRoutes()
                 # TODO: SeparateAirportLinks(),
                 # TODO: SimplifyBlocks(),  # merge consecutive trips belonging to the same route
-                # TODO: GenerateCalendarExceptions(),
                 # TODO: GenerateShapes(),
                 CurateAgencies(),
                 CurateRoutes(),

@@ -2,15 +2,17 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import fnmatch
-from collections.abc import Generator, Iterable
+from collections.abc import Container, Generator, Iterable
 from statistics import mean
 from typing import Any, cast
 from zipfile import ZipFile
 
+import holidays
 import ijson  # type: ignore
 from impuls import DBConnection, Task, TaskRuntime
 from impuls.model import Agency, Calendar, Date, Route, Stop, StopTime, TimePoint, Translation, Trip
 from impuls.tools.strings import find_non_conflicting_id
+from impuls.tools.temporal import date_range
 
 from ..util import compact_json, pack_list
 
@@ -35,7 +37,7 @@ class LoadSchedules(Task):
             ZipFile(r.resources["mini-tokyo-3d.zip"].stored_at, "r") as zip,
             r.db.transaction(),
         ):
-            self.create_calendars(r.db)
+            self.create_calendars_and_exceptions(r.db)
 
             self.load_railways(r.db, zip)
             assert self.direction_map["JR-East.Yamanote"] == {
@@ -62,6 +64,10 @@ class LoadSchedules(Task):
                 name_zh_hant TEXT
             ) STRICT;"""
         )
+
+    def create_calendars_and_exceptions(self, db: DBConnection) -> None:
+        self.create_calendars(db)
+        self.create_calendar_exceptions(db)
 
     def create_calendars(self, db: DBConnection) -> None:
         db.create_many(
@@ -98,6 +104,30 @@ class LoadSchedules(Task):
                 ),
             ],
         )
+
+    def create_calendar_exceptions(self, db: DBConnection) -> None:
+        japan_holidays = cast(Container[Date], holidays.JP())  # type: ignore
+        for day in date_range(self.start_date, self.end_date):
+            if day not in japan_holidays:
+                continue  # No changes outside of holidays
+            elif day.weekday() == 6:
+                continue  # No changes for holidays which fall on Sundays
+            elif day.weekday() == 5:
+                removed = ["Saturday"]  # Weekday is already inactive on a Saturday
+                added = ["Holiday"]  # SaturdayHoliday is already active on a Saturday
+            else:
+                removed = ["Weekday"]  # Saturday is already inactive on a weekday
+                added = ["SaturdayHoliday", "Holiday"]
+
+            day_str = day.isoformat()
+            db.raw_execute_many(
+                "INSERT INTO calendar_exceptions (calendar_id,date,exception_type) VALUES (?,?,2)",
+                ((id, day_str) for id in removed),
+            )
+            db.raw_execute_many(
+                "INSERT INTO calendar_exceptions (calendar_id,date,exception_type) VALUES (?,?,1)",
+                ((id, day_str) for id in added),
+            )
 
     def load_railways(self, db: DBConnection, zip: ZipFile) -> None:
         self.logger.debug("Loading railways.json")

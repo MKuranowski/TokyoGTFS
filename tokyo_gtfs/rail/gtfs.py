@@ -38,6 +38,7 @@ GTFS_HEADERS = {
         "saturday",
         "sunday",
     ),
+    "calendar_dates.txt": ("service_id", "date", "exception_type"),
     "trips.txt": (
         "trip_id",
         "route_id",
