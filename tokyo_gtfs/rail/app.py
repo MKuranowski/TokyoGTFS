@@ -15,7 +15,7 @@ from .gtfs import GTFS_HEADERS
 from .load_schedules import LoadSchedules
 
 
-class TokyoGTFS(App):
+class TokyoRailGTFS(App):
     def prepare(self, args: Namespace, options: PipelineOptions) -> Pipeline:
         return Pipeline(
             options=options,
@@ -24,7 +24,10 @@ class TokyoGTFS(App):
                 GenerateBlocks(),
                 GenerateHeadsigns(),
                 FixYamanoteLineHeadsigns(),
+                # TODO: MergeDuplicateRoutes()
                 # TODO: SeparateAirportLinks(),
+                # TODO: SimplifyBlocks(),  # merge consecutive trips belonging to the same route
+                # TODO: GenerateCalendarExceptions(),
                 # TODO: GenerateShapes(),
                 CurateAgencies(),
                 CurateRoutes(),
