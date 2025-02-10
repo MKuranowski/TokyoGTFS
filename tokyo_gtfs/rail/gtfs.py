@@ -46,6 +46,7 @@ GTFS_HEADERS = {
         "trip_short_name",
         "trip_headsign",
         "direction_id",
+        "exceptional",
         "block_id",
         "vehicle_kind",
     ),

@@ -1,0 +1,7 @@
+JR-East.NaritaExpress:
+  root_route: JR-East.SobuRapid
+  short_name_match: Narita Express
+
+Keisei.Skyliner:
+  root_route: Keisei.NaritaSkyAccess
+  short_name_match: Skyliner

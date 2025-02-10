@@ -5,7 +5,7 @@ from argparse import Namespace
 
 from impuls import App, HTTPResource, LocalResource, Pipeline, PipelineOptions
 from impuls.model import Attribution, FeedInfo
-from impuls.tasks import AddEntity, SaveGTFS
+from impuls.tasks import AddEntity, ExecuteSQL, RemoveUnusedEntities, SaveGTFS
 
 from .curate import CurateAgencies, CurateRoutes
 from .fix_yamanote_headsigns import FixYamanoteLineHeadsigns
@@ -13,6 +13,9 @@ from .generate_blocks import GenerateBlocks
 from .generate_headsigns import GenerateHeadsigns
 from .gtfs import GTFS_HEADERS
 from .load_schedules import LoadSchedules
+from .merge_routes import MergeRoutes
+from .separate_limited_expresses import SeparateLimitedExpresses
+from .simplify_blocks import SimplifyBlocks
 
 
 class TokyoRailGTFS(App):
@@ -20,14 +23,23 @@ class TokyoRailGTFS(App):
         return Pipeline(
             options=options,
             tasks=[
+                ExecuteSQL(
+                    task_name="CreateTranslationsIndex",
+                    statement=(
+                        "CREATE INDEX idx_translations_table_record "
+                        "ON translations(table_name, record_id, record_sub_id)"
+                    ),
+                ),
                 LoadSchedules(),
                 GenerateBlocks(),
                 GenerateHeadsigns(),
                 FixYamanoteLineHeadsigns(),
-                # TODO: MergeDuplicateRoutes()
-                # TODO: SeparateAirportLinks(),
-                # TODO: SimplifyBlocks(),  # merge consecutive trips belonging to the same route
+                SeparateLimitedExpresses(),
+                MergeRoutes(),
+                SimplifyBlocks(),
                 # TODO: GenerateShapes(),
+                RemoveUnusedEntities(),
+                # TODO: RemoveInvalidTranslations
                 CurateAgencies(),
                 CurateRoutes(),
                 AddEntity(
@@ -65,7 +77,6 @@ class TokyoRailGTFS(App):
                         lang="mul",
                     ),
                 ),
-                # TODO: RemoveUnusedEntities(),
                 SaveGTFS(GTFS_HEADERS, "tokyo_rail.zip", ensure_order=True),
             ],
             resources={
@@ -74,5 +85,7 @@ class TokyoRailGTFS(App):
                 ),
                 "agencies.csv": LocalResource("data/agencies.csv"),
                 "routes.csv": LocalResource("data/routes.csv"),
+                "limited_expresses.yml": LocalResource("data/limited_expresses.yml"),
+                "route_merges.yml": LocalResource("data/route_merges.yml"),
             },
         )

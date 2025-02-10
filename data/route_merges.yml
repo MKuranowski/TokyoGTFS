@@ -1,0 +1,48 @@
+JR-East.Musashino:
+  - JR-East.KeiyoKoyaBranch
+  - id: JR-East.KeiyoFutamataBranch
+    reverse_direction: true
+  - id: JR-East.MusashinoKunitachiBranch
+    reverse_direction: true
+  - JR-East.MusashinoOmiyaBranch
+  - id: JR-East.MusashinoNishiUrawaBranch
+    reverse_direction: true
+
+JR-East.ShonanShinjuku:
+  # OsakiBranch -> Shonan-Shinjuku to show correct platforms at Ōsaki
+  - id: JR-East.OsakiBranch
+    reverse_direction: true
+    exceptional: true
+
+JR-East.Tsurumi:
+  - JR-East.TsurumiUmiShibauraBranch
+  - JR-East.TsurumiOkawaBranch
+
+JR-East.Yokosuka:
+  # TokaidoFreight -> Yokosuka to show correct platforms at Tōkyō
+  - id: JR-East.TokaidoFreight
+    exceptional: true
+  # Just in case non-Narita-Express trains also end up on the Yamanote Freight line
+  - id: JR-East.YamanoteFreight
+    exceptional: true
+
+Seibu.SeibuChichibu:
+  - id: Seibu.SeibuChichibuBranch
+    reverse_direction: true
+
+Tobu.Nikko:
+  - id: Tobu.JRTobuConnection
+    exceptional: true
+
+Tobu.TobuSkytree:
+  - Tobu.TobuSkytreeBranch
+
+TokyoMetro.Fukutoshin:
+  - id: Seibu.S-Fukutoshin
+    reverse_direction: true
+    exceptional: true
+
+TokyoMetro.Yurakucho:
+  - id: Seibu.S-Yurakucho
+    reverse_direction: true
+    exceptional: true

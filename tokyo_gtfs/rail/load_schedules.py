@@ -290,6 +290,7 @@ class LoadSchedules(Task):
                     calendar_id=calendar_id,
                     short_name=short_name,
                     direction=direction,
+                    exceptional=False,
                     extra_fields_json=compact_json(
                         {
                             "train_type": i["y"],
