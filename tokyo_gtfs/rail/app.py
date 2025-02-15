@@ -5,7 +5,7 @@ from argparse import Namespace
 
 from impuls import App, HTTPResource, LocalResource, Pipeline, PipelineOptions
 from impuls.model import Attribution, FeedInfo
-from impuls.tasks import AddEntity, ExecuteSQL, RemoveUnusedEntities, SaveGTFS
+from impuls.tasks import AddEntity, RemoveUnusedEntities, SaveGTFS
 
 from .curate import CurateAgencies, CurateRoutes
 from .fix_yamanote_headsigns import FixYamanoteLineHeadsigns
@@ -23,13 +23,6 @@ class TokyoRailGTFS(App):
         return Pipeline(
             options=options,
             tasks=[
-                ExecuteSQL(
-                    task_name="CreateTranslationsIndex",
-                    statement=(
-                        "CREATE INDEX idx_translations_table_record "
-                        "ON translations(table_name, record_id, record_sub_id)"
-                    ),
-                ),
                 LoadSchedules(),
                 GenerateBlocks(),
                 GenerateHeadsigns(),
