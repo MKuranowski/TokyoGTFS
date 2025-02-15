@@ -104,7 +104,7 @@ class GenerateHeadsigns(Task):
         ]
 
     def generate_headsign(self, train: Train, lang: str) -> str:
-        if lang in ("en", "ko"):
+        if lang in ("default", "en", "ko"):
             left_bracket = "("
             right_bracket = ") "
             separator = " / "

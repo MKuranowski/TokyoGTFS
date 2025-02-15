@@ -93,7 +93,7 @@ class FixYamanoteLineHeadsigns(Task):
         assert train.destination, "Yamanote line trains w/o next link must have a destination"
         last_stop = getattr(self.get_stop_name(db, train.destination), lang)
 
-        if lang in ("en", "ko"):
+        if lang in ("default", "en", "ko"):
             return f"({direction}) {last_stop}"
         else:
             return f"【{direction}】{last_stop}"
