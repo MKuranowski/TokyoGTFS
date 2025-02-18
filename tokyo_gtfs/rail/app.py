@@ -5,7 +5,7 @@ from argparse import Namespace
 
 from impuls import App, HTTPResource, LocalResource, Pipeline, PipelineOptions
 from impuls.model import Attribution, FeedInfo
-from impuls.tasks import AddEntity, RemoveUnusedEntities, SaveGTFS
+from impuls.tasks import AddEntity, ModifyStopsFromCSV, RemoveUnusedEntities, SaveGTFS
 
 from .curate import CurateAgencies, CurateRoutes
 from .fix_yamanote_headsigns import FixYamanoteLineHeadsigns
@@ -30,6 +30,7 @@ class TokyoRailGTFS(App):
                 SeparateLimitedExpresses(),
                 MergeRoutes(),
                 SimplifyBlocks(),
+                ModifyStopsFromCSV("stations.csv"),
                 # TODO: GenerateShapes(),
                 RemoveUnusedEntities(),
                 # TODO: RemoveInvalidTranslations
@@ -80,5 +81,6 @@ class TokyoRailGTFS(App):
                 "routes.csv": LocalResource("data/routes.csv"),
                 "limited_expresses.yml": LocalResource("data/limited_expresses.yml"),
                 "route_merges.yml": LocalResource("data/route_merges.yml"),
+                "stations.csv": LocalResource("data/stations.csv"),
             },
         )
