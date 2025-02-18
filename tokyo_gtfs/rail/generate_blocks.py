@@ -253,8 +253,8 @@ class GenerateBlocks(Task):
     def _clone_trip(self, db: DBConnection, dst: str, src: str) -> None:
         db.raw_execute(
             "INSERT INTO trips (trip_id, route_id, calendar_id, short_name, direction, "
-            "extra_fields_json) SELECT ?, route_id, calendar_id, short_name, direction, "
-            "extra_fields_json FROM trips WHERE trip_id = ?",
+            "exceptional, extra_fields_json) SELECT ?, route_id, calendar_id, short_name, "
+            "direction, exceptional, extra_fields_json FROM trips WHERE trip_id = ?",
             (dst, src),
         )
         db.raw_execute(
