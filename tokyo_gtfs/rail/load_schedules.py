@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import fnmatch
+from collections import defaultdict
 from collections.abc import Container, Generator, Iterable
 from statistics import mean
 from typing import Any, cast
@@ -181,16 +182,30 @@ class LoadSchedules(Task):
 
         used_station_ids = set[str]()
         for group in _json_items_from_zip(zip, f"{ZIP_FILE_PREFIX}/station-groups.json"):
-            stop_ids = [cast(str, id) for sub_group in group for id in sub_group]
+            fixed_sub_groups = self._fix_stop_sub_groups(group)
+            for stem, child_ids in fixed_sub_groups.items():
+                # Don't create a station if it's just one stop
+                if len(child_ids) <= 1:
+                    continue
 
-            id_base = stop_ids[0].rpartition(".")[2]
-            station_id = find_non_conflicting_id(used_station_ids, id_base, ".")
-            used_station_ids.add(station_id)
+                # Generate a unique ID for the station
+                station_id = find_non_conflicting_id(used_station_ids, stem, ".")
+                used_station_ids.add(station_id)
 
-            name, lat, lon = self._calculate_station_data(db, stop_ids)
-            db.create(Stop(station_id, name, lat, lon, location_type=Stop.LocationType.STATION))
-            self._copy_stop_translations(db, station_id, stop_ids[0])
-            self._set_parent_station(db, station_id, stop_ids)
+                # Insert the station, copy translations and set parent_station on child stops
+                name, lat, lon = self._calculate_station_data(db, child_ids)
+                db.create(Stop(station_id, name, lat, lon, location_type=Stop.LocationType.STATION))
+                self._copy_stop_translations(db, station_id, child_ids[0])
+                self._set_parent_station(db, station_id, child_ids)
+
+    @staticmethod
+    def _fix_stop_sub_groups(group: list[list[str]]) -> defaultdict[str, list[str]]:
+        by_stem = defaultdict[str, list[str]](list)
+        for sub_group in group:
+            for id in sub_group:
+                stem = _stop_id_stem(id)
+                by_stem[stem].append(id)
+        return by_stem
 
     @staticmethod
     def _calculate_station_data(
@@ -370,3 +385,19 @@ def _parse_time(x: str) -> TimePoint:
 
 def _add_24h(x: TimePoint) -> TimePoint:
     return TimePoint(seconds=x.total_seconds() + DAY)
+
+
+def _stop_id_stem(stop_id: str) -> str:
+    """Returns the "stem" of a stop_id, roughly identifying the station.
+
+    >>> _stop_id_stem("Toei.Oedo.Tochomae")
+    'Tochomae'
+    >>> _stop_id_stem("Toei.Oedo.Tochomae.1")
+    'Tochomae'
+    >>> _stop_id_stem("Tochomae")
+    'Tochomae'
+    """
+    parts = stop_id.split(".")
+    if len(parts) >= 2 and parts[-1] in {"0", "1", "2"}:
+        return parts[-2]
+    return parts[-1]
