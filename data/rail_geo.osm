@@ -2876,7 +2876,6 @@
   <node id='-149441' action='modify' visible='true' lat='35.70977938214' lon='139.95383619726' />
   <node id='-149442' action='modify' visible='true' lat='35.70874268997' lon='139.95609461725' />
   <node id='-149443' action='modify' visible='true' lat='35.70785626173' lon='139.95794802636' />
-  <node id='-149444' action='modify' visible='true' lat='35.70712881873' lon='139.95947420329' />
   <node id='-149607' action='modify' visible='true' lat='35.70866863783' lon='139.95655059546' />
   <node id='-149608' action='modify' visible='true' lat='35.70911075861' lon='139.95567619532' />
   <node id='-149609' action='modify' visible='true' lat='35.70959425735' lon='139.95452284545' />
@@ -3539,7 +3538,7 @@
   <node id='-160866' action='modify' visible='true' lat='35.61341837704' lon='140.11662482679' />
   <node id='-160867' action='modify' visible='true' lat='35.61400275975' lon='140.11771380365' />
   <node id='-160868' action='modify' visible='true' lat='35.6149621848' lon='140.11913001001' />
-  <node id='-165876' action='modify' visible='true' lat='35.68179267597' lon='139.76545392931' />
+  <node id='-165876' action='modify' visible='true' lat='35.68170552892' lon='139.76538821519' />
   <node id='-165974' action='modify' visible='true' lat='35.67770101936' lon='139.76477533043' />
   <node id='-165997' action='modify' visible='true' lat='35.6823678441' lon='139.76587771833' />
   <node id='-165999' action='modify' visible='true' lat='35.68289072062' lon='139.76645171106' />
@@ -19372,6 +19371,8 @@
   <node id='-267161' action='modify' visible='true' lat='35.44264585804' lon='139.6501874034' />
   <node id='-267162' action='modify' visible='true' lat='35.44226868921' lon='139.65070229994' />
   <node id='-267163' action='modify' visible='true' lat='35.44209942262' lon='139.65093716502' />
+  <node id='-267194' action='modify' visible='true' lat='35.70707001317' lon='139.95943128795' />
+  <node id='-267195' action='modify' visible='true' lat='35.70729652324' lon='139.95920598239' />
   <way id='-101782' action='modify' visible='true'>
     <nd ref='-104199' />
     <nd ref='-104331' />
@@ -22999,9 +23000,10 @@
   </way>
   <way id='-107425' action='modify' visible='true'>
     <nd ref='-149443' />
-    <nd ref='-149444' />
+    <nd ref='-267195' />
     <tag k='JR-East.ChuoSobuLocal' v='yes' />
     <tag k='JR-East.NaritaExpress' v='yes' />
+    <tag k='JR-East.SobuRapid' v='yes' />
     <tag k='TokyoMetro.Tozai' v='yes' />
     <tag k='access' v='no' />
     <tag k='railway' v='rail' />
@@ -23159,7 +23161,7 @@
     <tag k='railway' v='rail' />
   </way>
   <way id='-107604' action='modify' visible='true'>
-    <nd ref='-149444' />
+    <nd ref='-267195' />
     <nd ref='-149610' />
     <tag k='JR-East.ChuoSobuLocal' v='yes' />
     <tag k='JR-East.NaritaExpress' v='yes' />
@@ -30060,13 +30062,13 @@
     <nd ref='-221923' />
     <nd ref='-221924' />
     <nd ref='-221925' />
-    <nd ref='-149444' />
+    <nd ref='-267194' />
     <tag k='JR-East.Musashino' v='yes' />
     <tag k='access' v='no' />
     <tag k='railway' v='rail' />
   </way>
   <way id='-116298' action='modify' visible='true'>
-    <nd ref='-149444' />
+    <nd ref='-267194' />
     <nd ref='-221947' />
     <nd ref='-221948' />
     <nd ref='-221949' />
@@ -36045,6 +36047,7 @@
     <nd ref='-261727' />
     <tag k='JR-East.JobanRapid' v='yes' />
     <tag k='JR-East.KeihinTohokuNegishi' v='yes' />
+    <tag k='JR-East.NaritaExpress' v='yes' />
     <tag k='JR-East.Tokaido' v='yes' />
     <tag k='JR-East.Yamanote' v='yes' />
     <tag k='JR-East.Yokosuka' v='yes' />

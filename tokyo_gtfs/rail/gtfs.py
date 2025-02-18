@@ -47,6 +47,7 @@ GTFS_HEADERS = {
         "trip_headsign",
         "direction_id",
         "exceptional",
+        "shape_id",
         "block_id",
         "vehicle_kind",
     ),
@@ -56,6 +57,14 @@ GTFS_HEADERS = {
         "stop_id",
         "arrival_time",
         "departure_time",
+        "shape_dist_traveled",
+    ),
+    "shapes.txt": (
+        "shape_id",
+        "shape_pt_sequence",
+        "shape_pt_lat",
+        "shape_pt_lon",
+        "shape_dist_traveled",
     ),
     "attributions.txt": (
         "attribution_id",

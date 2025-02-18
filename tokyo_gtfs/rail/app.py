@@ -11,6 +11,7 @@ from .curate import CurateAgencies, CurateRoutes
 from .fix_yamanote_headsigns import FixYamanoteLineHeadsigns
 from .generate_blocks import GenerateBlocks
 from .generate_headsigns import GenerateHeadsigns
+from .generate_shapes import GenerateShapes
 from .gtfs import GTFS_HEADERS
 from .load_schedules import LoadSchedules
 from .merge_routes import MergeRoutes
@@ -31,7 +32,7 @@ class TokyoRailGTFS(App):
                 MergeRoutes(),
                 SimplifyBlocks(),
                 ModifyStopsFromCSV("stations.csv"),
-                # TODO: GenerateShapes(),
+                GenerateShapes(),
                 RemoveUnusedEntities(),
                 # TODO: RemoveInvalidTranslations
                 CurateAgencies(),
@@ -78,6 +79,7 @@ class TokyoRailGTFS(App):
                     "https://github.com/nagix/mini-tokyo-3d/archive/refs/heads/master.zip"
                 ),
                 "agencies.csv": LocalResource("data/agencies.csv"),
+                "rail_geo.osm": LocalResource("data/rail_geo.osm"),
                 "routes.csv": LocalResource("data/routes.csv"),
                 "limited_expresses.yml": LocalResource("data/limited_expresses.yml"),
                 "route_merges.yml": LocalResource("data/route_merges.yml"),
