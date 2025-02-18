@@ -115,7 +115,7 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 ,Keisei.NaritaSkyAccess,rail,KS,京成成田スカイアクセス線,Keisei Narita Sky Access Line,게이세이 나리타 스카이액세스선,京成成田Sky Access线,京成成田Sky Access線,FF8620
 ,Keisei.Oshiage,rail,KS,京成押上線,Keisei Oshiage Line,게이세이 오시아게선,京成押上线,京成押上線,005AAA
 ,Keisei.Skyliner,rail,Skyliner,京成スカイライナー,Keisei Skyliner,게이세이 스카이라이너,京成Skyliner,京成Skyliner,092D67
-1,Sotetsu.Izumino,rail,SO,相鉄いずみ野線,Stetsu Izumino Line,소테쓰 이즈미노선,相铁泉野线,相鐵泉野線,0072C2
+1,Sotetsu.Izumino,rail,SO,相鉄いずみ野線,Sotetsu Izumino Line,소테쓰 이즈미노선,相铁泉野线,相鐵泉野線,0072C2
 1,Sotetsu.Main,rail,SO,相鉄本線,Sotetsu Main Line,소테쓰 본선,相铁本线,相鐵本線,0072C2
 1,Sotetsu.SotetsuShinYokohama,rail,SO,相鉄新横浜線,Sotetsu Shin-Yokohama Line,소테쓰 신요코하마선,相铁新横滨线,相鐵新橫濱線,0072C2
 1,TWR.Rinkai,rail,R,りんかい線,Rinkai Line,린카이선,临海线,臨海線,38257D
