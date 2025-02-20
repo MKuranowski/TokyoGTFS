@@ -80,9 +80,9 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,Tobu.TobuUrbanPark,rail,TD,東武東武アーバンパークライン,Tobu Urban Park Line,도부 어번 파크 라인,东武都市公园线,東武都市公園線,3EB5E6
 1,Tobu.Tojo,rail,TJ,東武東上線,Tobu Tōjō Line,도부 도조선,东武东上线,東武東上線,00408F
 1,Tobu.Utsunomiya,rail,TN,東武宇都宮線,Tobu Utsunomiya Line,도부 우쓰노미야선,东武宇都宫线,東武宇都宮線,F5A400
-,Odakyu.Enoshima,rail,OE,小田急江ノ島線,Odakyu Enoshima Line,오다큐 에노시마선,小田急江之岛线,小田急江之島線,0483C8
-,Odakyu.Odawara,rail,OH,小田急小田原線,Odakyu Odawara Line,오다큐 오다와라선,小田急小田原线,小田急小田原線,0483C8
-,Odakyu.Tama,rail,OT,小田急多摩線,Odakyu Tama Line,오다큐 다마선,小田急多摩线,小田急多摩線,0483C8
+1,Odakyu.Enoshima,rail,OE,小田急江ノ島線,Odakyu Enoshima Line,오다큐 에노시마선,小田急江之岛线,小田急江之島線,0483C8
+1,Odakyu.Odawara,rail,OH,小田急小田原線,Odakyu Odawara Line,오다큐 오다와라선,小田急小田原线,小田急小田原線,0483C8
+1,Odakyu.Tama,rail,OT,小田急多摩線,Odakyu Tama Line,오다큐 다마선,小田急多摩线,小田急多摩線,0483C8
 ,Keio.Dobutsuen,rail,KO,京王動物園線,Keiō Dōbutsuen Line,게이오 도부쓰엔선,京王动物园线,京王動物園線,D5007F
 ,Keio.Inokashira,rail,IN,京王井の頭線,Keiō Inokashira Line,게이오 이노카시라선,京王井之头线,京王井之頭線,103675
 ,Keio.Keibajo,rail,KO,京王競馬場線,Keiō Keibajō Line,게이오 게이바조선,京王竞马场线,京王競馬場線,D5007F
@@ -107,14 +107,14 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,Keikyu.Kurihama,rail,KK,京急久里浜線,Keikyū Kurihama Line,게이큐 구리하마선,京急久里滨线,京急久里濱線,00BFFF
 1,Keikyu.Main,rail,KK,京急本線,Keikyū Main Line,게이큐 본선,京急本线,京急本線,00BFFF
 1,Keikyu.Zushi,rail,KK,京急逗子線,Keikyū Zushi Line,게이큐 즈시선,京急逗子线,京急逗子線,00BFFF
-,Keisei.Chiba,rail,KS,京成千葉線,Keisei Chiba Line,게이세이 지바선,京成千叶线,京成千葉線,005AAA
-,Keisei.Chihara,rail,KS,京成千原線,Keisei Chihara Line,게이세이 지하라선,京成千原线,京成千原線,005AAA
-,Keisei.HigashiNarita,rail,KS,京成東成田線,Keisei Higashi-Narita Line,게이세이 히가시나리타선,京成东成田线,京成東成田線,005AAA
-,Keisei.Kanamachi,rail,KS,京成金町線,Keisei Kanamachi Line,게이세이 가나마치선,京成金町线,京成金町線,005AAA
-,Keisei.Main,rail,KS,京成本線,Keisei Main Line,게이세이 본선,京成本线,京成本線,005AAA
-,Keisei.NaritaSkyAccess,rail,KS,京成成田スカイアクセス線,Keisei Narita Sky Access Line,게이세이 나리타 스카이액세스선,京成成田Sky Access线,京成成田Sky Access線,FF8620
-,Keisei.Oshiage,rail,KS,京成押上線,Keisei Oshiage Line,게이세이 오시아게선,京成押上线,京成押上線,005AAA
-,Keisei.Skyliner,rail,Skyliner,京成スカイライナー,Keisei Skyliner,게이세이 스카이라이너,京成Skyliner,京成Skyliner,092D67
+1,Keisei.Chiba,rail,KS,京成千葉線,Keisei Chiba Line,게이세이 지바선,京成千叶线,京成千葉線,005AAA
+1,Keisei.Chihara,rail,KS,京成千原線,Keisei Chihara Line,게이세이 지하라선,京成千原线,京成千原線,005AAA
+1,Keisei.HigashiNarita,rail,KS,京成東成田線,Keisei Higashi-Narita Line,게이세이 히가시나리타선,京成东成田线,京成東成田線,005AAA
+1,Keisei.Kanamachi,rail,KS,京成金町線,Keisei Kanamachi Line,게이세이 가나마치선,京成金町线,京成金町線,005AAA
+1,Keisei.Main,rail,KS,京成本線,Keisei Main Line,게이세이 본선,京成本线,京成本線,005AAA
+1,Keisei.NaritaSkyAccess,rail,KS,京成成田スカイアクセス線,Keisei Narita Sky Access Line,게이세이 나리타 스카이액세스선,京成成田Sky Access线,京成成田Sky Access線,FF8620
+1,Keisei.Oshiage,rail,KS,京成押上線,Keisei Oshiage Line,게이세이 오시아게선,京成押上线,京成押上線,005AAA
+1,Keisei.Skyliner,rail,Skyliner,京成スカイライナー,Keisei Skyliner,게이세이 스카이라이너,京成Skyliner,京成Skyliner,092D67
 1,Sotetsu.Izumino,rail,SO,相鉄いずみ野線,Sotetsu Izumino Line,소테쓰 이즈미노선,相铁泉野线,相鐵泉野線,0072C2
 1,Sotetsu.Main,rail,SO,相鉄本線,Sotetsu Main Line,소테쓰 본선,相铁本线,相鐵本線,0072C2
 1,Sotetsu.SotetsuShinYokohama,rail,SO,相鉄新横浜線,Sotetsu Shin-Yokohama Line,소테쓰 신요코하마선,相铁新横滨线,相鐵新橫濱線,0072C2
@@ -122,12 +122,12 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 ,KantoRailway.Joso,rail,,関鉄常総線,Kantō Railway Jōsō Line,간토 철도 조소선,关铁常总线,關鐵常總線,0000CD
 ,KantoRailway.Ryugasaki,rail,,関鉄竜ヶ崎線,Kantō Railway Ryūgasaki Line,간토 철도 류가사키선,关铁龙崎线,關鐵龍崎線,0000CD
 1,Yurikamome.Yurikamome,rail,U,ゆりかもめ,Yurikamome Line,유리카모메선,百合鸥线,百合鷗線,0E62B9
-,ShinKeisei.ShinKeisei,rail,SL,新京成線,Shin-Keisei Line,신케이세이선,新京成线,新京成線,FF69B4
+1,ShinKeisei.ShinKeisei,rail,SL,新京成線,Shin-Keisei Line,신케이세이선,新京成线,新京成線,FF69B4
 1,Minatomirai.Minatomirai,rail,MM,みなとみらい線,Minatomirai Line,미나토미라이선,港未来线,港未來線,00469C
 ,SaitamaRailway.SaitamaRailway,rail,SR,埼玉高速鉄道線,Saitama Railway Line,사이타마 고속 철도선,埼玉高速铁道线,埼玉高速鐵道線,345CAA
-,Hokuso.Hokuso,rail,HS,北総線,Hokusō Line,호쿠소 선,北总线,北總線,00BFFF
+1,Hokuso.Hokuso,rail,HS,北総線,Hokusō Line,호쿠소 선,北总线,北總線,00BFFF
 ,ToyoRapid.ToyoRapid,rail,TR,東葉高速線,Tōyō Rapid Line,도요 고속선,东叶高速线,東葉高速線,0AAA3C
-,Shibayama.Shibayama,rail,SR,芝山鉄道線,Shibayama Railway Line,시바야마 철도선,芝山铁道线,芝山鐵道線,008459
+1,Shibayama.Shibayama,rail,SR,芝山鉄道線,Shibayama Railway Line,시바야마 철도선,芝山铁道线,芝山鐵道線,008459
 ,Chichibu.Chichibu,rail,CR,秩父本線,Chichibu Main Line,지치부 본선,秩父本线,秩父本線,4169E1
 1,MIR.TsukubaExpress,rail,TX,つくばエクスプレス,Tsukuba Express Line,츠쿠바 익스프레스선,筑波特快线,筑波快線,000084
 1,TamaMonorail.TamaMonorail,rail,TT,多摩モノレール,Tama Monorail,다마 모노레일,多摩单轨电车,多摩單軌電車,22625E
