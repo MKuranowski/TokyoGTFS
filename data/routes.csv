@@ -124,22 +124,22 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,Yurikamome.Yurikamome,rail,U,ゆりかもめ,Yurikamome Line,유리카모메선,百合鸥线,百合鷗線,0E62B9
 1,ShinKeisei.ShinKeisei,rail,SL,新京成線,Shin-Keisei Line,신케이세이선,新京成线,新京成線,FF69B4
 1,Minatomirai.Minatomirai,rail,MM,みなとみらい線,Minatomirai Line,미나토미라이선,港未来线,港未來線,00469C
-,SaitamaRailway.SaitamaRailway,rail,SR,埼玉高速鉄道線,Saitama Railway Line,사이타마 고속 철도선,埼玉高速铁道线,埼玉高速鐵道線,345CAA
+1,SaitamaRailway.SaitamaRailway,rail,SR,埼玉高速鉄道線,Saitama Railway Line,사이타마 고속 철도선,埼玉高速铁道线,埼玉高速鐵道線,345CAA
 1,Hokuso.Hokuso,rail,HS,北総線,Hokusō Line,호쿠소 선,北总线,北總線,00BFFF
-,ToyoRapid.ToyoRapid,rail,TR,東葉高速線,Tōyō Rapid Line,도요 고속선,东叶高速线,東葉高速線,0AAA3C
+1,ToyoRapid.ToyoRapid,rail,TR,東葉高速線,Tōyō Rapid Line,도요 고속선,东叶高速线,東葉高速線,0AAA3C
 1,Shibayama.Shibayama,rail,SR,芝山鉄道線,Shibayama Railway Line,시바야마 철도선,芝山铁道线,芝山鐵道線,008459
 ,Chichibu.Chichibu,rail,CR,秩父本線,Chichibu Main Line,지치부 본선,秩父本线,秩父本線,4169E1
 1,MIR.TsukubaExpress,rail,TX,つくばエクスプレス,Tsukuba Express Line,츠쿠바 익스프레스선,筑波特快线,筑波快線,000084
 1,TamaMonorail.TamaMonorail,rail,TT,多摩モノレール,Tama Monorail,다마 모노레일,多摩单轨电车,多摩單軌電車,22625E
-,ShonanMonorail.Enoshima,monorail,SMR,湘南モノレール江の島線,Shōnan Monorail Enoshima Line,쇼난 모노레일 에노시마선,湘南单轨电车江之岛线,湘南單軌電車江之島線,B30000
+1,ShonanMonorail.Enoshima,monorail,SMR,湘南モノレール江の島線,Shōnan Monorail Enoshima Line,쇼난 모노레일 에노시마선,湘南单轨电车江之岛线,湘南單軌電車江之島線,B30000
 1,TokyoMonorail.HanedaAirport,monorail,MO,東京モノレール羽田空港線,Tokyo Monorail Haneda Airport Line,도쿄 모노레일 하네다 공항선,东京单轨电车羽田机场线,東京單軌電車羽田機場線,000080
-,ChibaMonorail.Line1,monorail,CM1,千葉モノレール1号線,Chiba Monorail Line 1,지바 모노레일 1호선,千叶单轨电车1号线,千葉單軌電車1號線,008EB2
-,ChibaMonorail.Line2,monorail,CM2,千葉モノレール2号線,Chiba Monorail Line 2,지바 모노레일 2호선,千叶单轨电车2号线,千葉單軌電車2號線,008EB2
-,Ryutetsu.Nagareyama,rail,RN,流鉄流山線,Ryūtetsu Nagareyama Line,류테쓰 나가레야마선,流铁流山线,流鐵流山線,D64022
-,EER.Enoshima,tram,EN,江ノ島電鉄線,Enoshima Electric Railway Line,에노시마 전철선,江之岛电铁线,江之島電鐵線,0C6346
-,YSL.KanazawaSeasideLine,rail,,金沢シーサイドライン,Kanazawa Seaside Line,가나자와 시사이드 라인,金泽海岸线,金澤海岸線,F68B1E
+1,ChibaMonorail.Line1,monorail,CM1,千葉モノレール1号線,Chiba Monorail Line 1,지바 모노레일 1호선,千叶单轨电车1号线,千葉單軌電車1號線,008EB2
+1,ChibaMonorail.Line2,monorail,CM2,千葉モノレール2号線,Chiba Monorail Line 2,지바 모노레일 2호선,千叶单轨电车2号线,千葉單軌電車2號線,008EB2
+1,Ryutetsu.Nagareyama,rail,RN,流鉄流山線,Ryūtetsu Nagareyama Line,류테쓰 나가레야마선,流铁流山线,流鐵流山線,D64022
+1,EER.Enoshima,tram,EN,江ノ島電鉄線,Enoshima Electric Railway Line,에노시마 전철선,江之岛电铁线,江之島電鐵線,0C6346
+1,YSL.KanazawaSeasideLine,rail,,金沢シーサイドライン,Kanazawa Seaside Line,가나자와 시사이드 라인,金泽海岸线,金澤海岸線,F68B1E
 ,Isumi.Isumi,rail,,いすみ線,Isumi Line,이스미선,夷隅线,夷隅線,FFD400
-,SNUT.NewShuttle,rail,NS,ニューシャトル,New Shuttle,뉴셔틀,New Shuttle,New Shuttle,FFD400
-,Yamaman.Yukarigaoka,rail,,ユーカリが丘線,Yukarigaoka Line,유카리가오카선,有加利丘线,有加利丘線,00BA6E
+1,SNUT.NewShuttle,rail,NS,ニューシャトル,New Shuttle,뉴셔틀,New Shuttle,New Shuttle,FFD400
+1,Yamaman.Yukarigaoka,rail,,ユーカリが丘線,Yukarigaoka Line,유카리가오카선,有加利丘线,有加利丘線,00BA6E
 ,Kominato.Kominato,rail,,小湊鉄道線,Kominato Line,고미나토 철도선,小凑铁道线,小湊鐵道線,9D1800
-,JR-Central.Tokaido,rail,CA,JR東海道線,JR Tokaidō Line,JR도카이도선,JR东海道线,JR東海道線,F68719
+1,JR-Central.Tokaido,rail,CA,JR東海道線,JR Tokaidō Line,JR도카이도선,JR东海道线,JR東海道線,F68719
