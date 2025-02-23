@@ -83,25 +83,25 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,Odakyu.Enoshima,rail,OE,小田急江ノ島線,Odakyu Enoshima Line,오다큐 에노시마선,小田急江之岛线,小田急江之島線,0483C8
 1,Odakyu.Odawara,rail,OH,小田急小田原線,Odakyu Odawara Line,오다큐 오다와라선,小田急小田原线,小田急小田原線,0483C8
 1,Odakyu.Tama,rail,OT,小田急多摩線,Odakyu Tama Line,오다큐 다마선,小田急多摩线,小田急多摩線,0483C8
-,Keio.Dobutsuen,rail,KO,京王動物園線,Keiō Dōbutsuen Line,게이오 도부쓰엔선,京王动物园线,京王動物園線,D5007F
-,Keio.Inokashira,rail,IN,京王井の頭線,Keiō Inokashira Line,게이오 이노카시라선,京王井之头线,京王井之頭線,103675
-,Keio.Keibajo,rail,KO,京王競馬場線,Keiō Keibajō Line,게이오 게이바조선,京王竞马场线,京王競馬場線,D5007F
-,Keio.Keio,rail,KO,京王線,Keiō Line,게이오선,京王线,京王線,D5007F
-,Keio.KeioNew,rail,KO,京王新線,Keiō New Line,게이오신선,京王新线,京王新線,D5007F
-,Keio.Sagamihara,rail,KO,京王相模原線,Keiō Sagamihara Line,게이오 사가미하라선,京王相模原线,京王相模原線,D5007F
-,Keio.Takao,rail,KO,京王高尾線,Keiō Takao Line,게이오 다카오선,京王高尾线,京王高尾線,D5007F
-,Seibu.Haijima,rail,SS,西武拝島線,Seibu Haijima Line,세이부 하이지마선,西武拜岛线,西武拜島線,00A8C0
-,Seibu.Ikebukuro,rail,SI,西武池袋線,Seibu Ikebukuro Line,세이부 이케부쿠로선,西武池袋线,西武池袋線,F07B00
-,Seibu.Kokubunji,rail,SK,西武国分寺線,Seibu Kokubunji Line,세이부 고쿠분지선,西武国分寺线,西武國分寺線,35B55C
-,Seibu.Sayama,rail,SI,西武狭山線,Seibu Sayama Line,세이부 사야마선,西武狭山线,西武狹山線,F07B00
-,Seibu.SeibuChichibu,rail,SI,西武秩父線,Seibu Chichibu Line,세이부 지치부선,西武秩父线,西武秩父線,F07B00
-,Seibu.SeibuYurakucho,rail,SI,西武有楽町線,Seibu Yūrakuchō Line,세이부 유라쿠초선,西武有乐町线,西武有樂町線,F07B00
-,Seibu.Seibuen,rail,SK,西武園線,Seibu Seibuen Line,세이부엔선,西武园线,西武園線,35B55C
-,Seibu.Shinjuku,rail,SS,西武新宿線,Seibu Shinjuku Line,세이부 신주쿠선,西武新宿线,西武新宿線,00A8C0
-,Seibu.Tamagawa,rail,SW,西武多摩川線,Seibu Tamagawa Line,세이부 다마가와선,西武多摩川线,西武多摩川線,F17D1F
-,Seibu.Tamako,rail,ST,西武多摩湖線,Seibu Tamako Line,세이부 다마코선,西武多摩湖线,西武多摩湖線,F7AC28
-,Seibu.Toshima,rail,SI,西武豊島線,Seibu Toshima Line,세이부 도시마선,西武丰岛线,西武豐島線,F07B00
-,Seibu.Yamaguchi,rail,SY,西武山口線,Seibu Yamaguchi Line,세이부 야마구치선,西武山口线,西武山口線,ED463E
+1,Keio.Dobutsuen,rail,KO,京王動物園線,Keiō Dōbutsuen Line,게이오 도부쓰엔선,京王动物园线,京王動物園線,D5007F
+1,Keio.Inokashira,rail,IN,京王井の頭線,Keiō Inokashira Line,게이오 이노카시라선,京王井之头线,京王井之頭線,103675
+1,Keio.Keibajo,rail,KO,京王競馬場線,Keiō Keibajō Line,게이오 게이바조선,京王竞马场线,京王競馬場線,D5007F
+1,Keio.Keio,rail,KO,京王線,Keiō Line,게이오선,京王线,京王線,D5007F
+1,Keio.KeioNew,rail,KO,京王新線,Keiō New Line,게이오신선,京王新线,京王新線,D5007F
+1,Keio.Sagamihara,rail,KO,京王相模原線,Keiō Sagamihara Line,게이오 사가미하라선,京王相模原线,京王相模原線,D5007F
+1,Keio.Takao,rail,KO,京王高尾線,Keiō Takao Line,게이오 다카오선,京王高尾线,京王高尾線,D5007F
+1,Seibu.Haijima,rail,SS,西武拝島線,Seibu Haijima Line,세이부 하이지마선,西武拜岛线,西武拜島線,00A8C0
+1,Seibu.Ikebukuro,rail,SI,西武池袋線,Seibu Ikebukuro Line,세이부 이케부쿠로선,西武池袋线,西武池袋線,F07B00
+1,Seibu.Kokubunji,rail,SK,西武国分寺線,Seibu Kokubunji Line,세이부 고쿠분지선,西武国分寺线,西武國分寺線,35B55C
+1,Seibu.Sayama,rail,SI,西武狭山線,Seibu Sayama Line,세이부 사야마선,西武狭山线,西武狹山線,F07B00
+1,Seibu.SeibuChichibu,rail,SI,西武秩父線,Seibu Chichibu Line,세이부 지치부선,西武秩父线,西武秩父線,F07B00
+1,Seibu.SeibuYurakucho,rail,SI,西武有楽町線,Seibu Yūrakuchō Line,세이부 유라쿠초선,西武有乐町线,西武有樂町線,F07B00
+1,Seibu.Seibuen,rail,SK,西武園線,Seibu Seibuen Line,세이부엔선,西武园线,西武園線,35B55C
+1,Seibu.Shinjuku,rail,SS,西武新宿線,Seibu Shinjuku Line,세이부 신주쿠선,西武新宿线,西武新宿線,00A8C0
+1,Seibu.Tamagawa,rail,SW,西武多摩川線,Seibu Tamagawa Line,세이부 다마가와선,西武多摩川线,西武多摩川線,F17D1F
+1,Seibu.Tamako,rail,ST,西武多摩湖線,Seibu Tamako Line,세이부 다마코선,西武多摩湖线,西武多摩湖線,F7AC28
+1,Seibu.Toshima,rail,SI,西武豊島線,Seibu Toshima Line,세이부 도시마선,西武丰岛线,西武豐島線,F07B00
+1,Seibu.Yamaguchi,rail,SY,西武山口線,Seibu Yamaguchi Line,세이부 야마구치선,西武山口线,西武山口線,ED463E
 1,Keikyu.Airport,rail,KK,京急空港線,Keikyū Airport Line,게이큐 공항선,京急机场线,京急機場線,00BFFF
 1,Keikyu.Daishi,rail,KK,京急大師線,Keikyū Daishi Line,게이큐 다이시선,京急大师线,京急大師線,00BFFF
 1,Keikyu.Kurihama,rail,KK,京急久里浜線,Keikyū Kurihama Line,게이큐 구리하마선,京急久里滨线,京急久里濱線,00BFFF
