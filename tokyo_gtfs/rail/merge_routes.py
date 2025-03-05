@@ -59,7 +59,7 @@ class MergeRoutes(Task):
     ) -> int:
         set_clauses = "route_id = ?"
         if config.reverse_direction:
-            set_clauses += ", direction = iif(direction = 0, 1, direction = 1, 0, NULL)"
+            set_clauses += ", direction = CASE direction WHEN 0 THEN 1 WHEN 1 THEN 0 ELSE NULL END"
         if config.exceptional:
             set_clauses += ", exceptional = 1"
 
