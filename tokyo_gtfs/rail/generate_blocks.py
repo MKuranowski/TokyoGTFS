@@ -1,9 +1,8 @@
 # © Copyright 2025 Mikołaj Kuranowski
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-import copy
 from collections.abc import Iterable
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from itertools import chain
 from typing import cast
 
@@ -160,7 +159,7 @@ class GenerateBlocks(Task):
             # Create clones of nodes from the shared leg
             # FIXME: To be 100% kosher we should also fix the next/prev ids and add the suffix
             shared_leg_copy = [
-                copy.replace(
+                replace(
                     n,
                     destinations=destinations,
                     clone_with_suffix=suffix,
