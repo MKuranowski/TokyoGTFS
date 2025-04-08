@@ -112,6 +112,7 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,Keisei.HigashiNarita,rail,KS,京成東成田線,Keisei Higashi-Narita Line,게이세이 히가시나리타선,京成东成田线,京成東成田線,005AAA
 1,Keisei.Kanamachi,rail,KS,京成金町線,Keisei Kanamachi Line,게이세이 가나마치선,京成金町线,京成金町線,005AAA
 1,Keisei.Main,rail,KS,京成本線,Keisei Main Line,게이세이 본선,京成本线,京成本線,005AAA
+1,Keisei.Matsudo,rail,KS,京成松戸線,Keisei Matsudo Line,게이세이 마쓰도선,京成松戶线,京成松戶線,005AAA
 1,Keisei.NaritaSkyAccess,rail,KS,京成成田スカイアクセス線,Keisei Narita Sky Access Line,게이세이 나리타 스카이액세스선,京成成田Sky Access线,京成成田Sky Access線,FF8620
 1,Keisei.Oshiage,rail,KS,京成押上線,Keisei Oshiage Line,게이세이 오시아게선,京成押上线,京成押上線,005AAA
 1,Keisei.Skyliner,rail,Skyliner,京成スカイライナー,Keisei Skyliner,게이세이 스카이라이너,京成Skyliner,京成Skyliner,092D67
@@ -122,7 +123,6 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,KantoRailway.Joso,rail,,関鉄常総線,Kantō Railway Jōsō Line,간토 철도 조소선,关铁常总线,關鐵常總線,0000CD
 1,KantoRailway.Ryugasaki,rail,,関鉄竜ヶ崎線,Kantō Railway Ryūgasaki Line,간토 철도 류가사키선,关铁龙崎线,關鐵龍崎線,0000CD
 1,Yurikamome.Yurikamome,rail,U,ゆりかもめ,Yurikamome Line,유리카모메선,百合鸥线,百合鷗線,0E62B9
-1,ShinKeisei.ShinKeisei,rail,SL,新京成線,Shin-Keisei Line,신케이세이선,新京成线,新京成線,FF69B4
 1,Minatomirai.Minatomirai,rail,MM,みなとみらい線,Minatomirai Line,미나토미라이선,港未来线,港未來線,00469C
 1,SaitamaRailway.SaitamaRailway,rail,SR,埼玉高速鉄道線,Saitama Railway Line,사이타마 고속 철도선,埼玉高速铁道线,埼玉高速鐵道線,345CAA
 1,Hokuso.Hokuso,rail,HS,北総線,Hokusō Line,호쿠소 선,北总线,北總線,00BFFF
