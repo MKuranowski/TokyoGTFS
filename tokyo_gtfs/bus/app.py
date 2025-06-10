@@ -4,7 +4,7 @@
 import csv
 import os
 from argparse import Namespace
-from dataclasses import dataclass
+from dataclasses import dataclass, fields
 from pathlib import Path
 from typing import Self
 
@@ -29,10 +29,10 @@ class TokyoBusGTFS(App):
         return Pipeline(
             tasks=[
                 InsertDummyAgencies(operators),
-                LoadRoutes(operators, "challenge_patterns.json"),
-                LoadStops(operators, "challenge_stops.json"),
-                LoadTimetables(operators, "challenge_timetables.json"),
-                LoadCalendars("challenge_calendars.json"),
+                LoadRoutes(operators, "bus_patterns.json"),
+                LoadStops(operators, "bus_stops.json"),
+                LoadTimetables(operators, "bus_timetables.json"),
+                LoadCalendars("bus_calendars.json"),
                 RemoveUnusedEntities(),
                 CurateAgencies("bus_operators.csv"),
                 AddEntity(
@@ -48,7 +48,7 @@ class TokyoBusGTFS(App):
                         is_operator=False,
                         is_authority=True,
                         is_data_source=True,
-                        url="https://developer.odpt.org/challenge_license",
+                        url="https://developer.odpt.org/terms/data_basic_license.html",
                     ),
                 ),
                 AddEntity(
@@ -75,21 +75,21 @@ class TokyoBusGTFS(App):
             ],
             resources={
                 "bus_operators.csv": LocalResource("data/bus_operators.csv"),
-                "challenge_calendars.json": HTTPResource.get(
-                    "https://api-challenge2024.odpt.org/api/v4/odpt:Calendar.json",
-                    params={"acl:consumerKey": key.challenge},
+                "bus_calendars.json": HTTPResource.get(
+                    "https://api.odpt.org/api/v4/odpt:Calendar.json",
+                    params={"acl:consumerKey": key.odpt},
                 ),
-                "challenge_patterns.json": HTTPResource.get(
-                    "https://api-challenge2024.odpt.org/api/v4/odpt:BusroutePattern.json",
-                    params={"acl:consumerKey": key.challenge},
+                "bus_patterns.json": HTTPResource.get(
+                    "https://api.odpt.org/api/v4/odpt:BusroutePattern.json",
+                    params={"acl:consumerKey": key.odpt},
                 ),
-                "challenge_stops.json": HTTPResource.get(
-                    "https://api-challenge2024.odpt.org/api/v4/odpt:BusstopPole.json",
-                    params={"acl:consumerKey": key.challenge},
+                "bus_stops.json": HTTPResource.get(
+                    "https://api.odpt.org/api/v4/odpt:BusstopPole.json",
+                    params={"acl:consumerKey": key.odpt},
                 ),
-                "challenge_timetables.json": HTTPResource.get(
-                    "https://api-challenge2024.odpt.org/api/v4/odpt:BusTimetable.json",
-                    params={"acl:consumerKey": key.challenge},
+                "bus_timetables.json": HTTPResource.get(
+                    "https://api.odpt.org/api/v4/odpt:BusTimetable.json",
+                    params={"acl:consumerKey": key.odpt},
                 ),
             },
             options=options,
@@ -99,14 +99,15 @@ class TokyoBusGTFS(App):
 @dataclass
 class ApiKeys:
     odpt: str
-    challenge: str
+    # challenge: str
 
     @classmethod
     def load_all(cls) -> Self:
+        keys = (field.name for field in fields(cls))
         return cls(
             *MultipleDataErrors.catch_all(
                 "load_api_keys",
-                map(cls.load_key, ("odpt", "challenge")),
+                map(cls.load_key, keys),
             )
         )
 
