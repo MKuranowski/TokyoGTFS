@@ -297,39 +297,39 @@ class LoadSchedules(Task):
             if direction is None:
                 self.logger.warning("Trip %s uses an unknown direction: %s", trip_id, i["d"])
 
-            # Create a trip
-            db.create(
-                Trip(
-                    id=trip_id,
-                    route_id=route_id,
-                    calendar_id=calendar_id,
-                    short_name=short_name,
-                    direction=direction,
-                    exceptional=False,
-                    extra_fields_json=compact_json(
-                        {
-                            "train_type": i["y"],
-                            "realtime_trip_id": i.get("t", ""),
-                            "vehicle_kind": i.get("v", ""),
-                            "destinations": pack_list(i.get("ds", [])),
-                            "previous": pack_list(i.get("pt", [])),
-                            "next": pack_list(i.get("nt", [])),
-                        }
-                    ),
-                )
+            # Create a trip object
+            trip = Trip(
+                id=trip_id,
+                route_id=route_id,
+                calendar_id=calendar_id,
+                short_name=short_name,
+                direction=direction,
+                exceptional=False,
+                extra_fields_json=compact_json(
+                    {
+                        "train_type": i["y"],
+                        "realtime_trip_id": i.get("t", ""),
+                        "vehicle_kind": i.get("v", ""),
+                        "destinations": pack_list(i.get("ds", [])),
+                        "previous": pack_list(i.get("pt", [])),
+                        "next": pack_list(i.get("nt", [])),
+                    }
+                ),
             )
 
             # Generate short_name translations
+            translations = list[Translation]()
             if names := i.get("nm"):
                 for lang in ("ja", "en", "ko", "zh-Hans", "zh-Hant"):
                     t_name = names[0].get(lang)
                     if t_name:
                         t_short_name = _prepend_with_number(number, t_name)
-                        db.create(
+                        translations.append(
                             Translation("trips", "trip_short_name", lang, t_short_name, trip_id)
                         )
 
             # Create stop_times
+            stop_times = list[StopTime]()
             previous_dep = TimePoint()
             for idx, j in enumerate(i["tt"]):
                 arr_s = j.get("a")
@@ -351,7 +351,17 @@ class LoadSchedules(Task):
                 if dep < arr:
                     dep = _add_24h(dep)
 
-                db.create(StopTime(trip_id, j["s"], idx, arr, dep))
+                stop_times.append(StopTime(trip_id, j["s"], idx, arr, dep))
+
+            # Ensure the trip has stop_times
+            if not stop_times:
+                self.logger.error("Trip %s has no stop_times", trip_id)
+                continue
+
+            # Persist the trip, translations and stop_times
+            db.create(trip)
+            db.create_many(Translation, translations)
+            db.create_many(StopTime, stop_times)
 
     def get_valid_calendar_for_trip(self, trip_id: str) -> str | None:
         parts = trip_id.split(".")

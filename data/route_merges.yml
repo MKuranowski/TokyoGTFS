@@ -26,6 +26,10 @@ JR-East.Yokosuka:
   - id: JR-East.YamanoteFreight
     exceptional: true
 
+Odakyu.Odawara:
+  - id: Odakyu.JROdakyuConnection
+    exceptional: true
+
 Seibu.SeibuChichibu:
   - id: Seibu.SeibuChichibuBranch
     reverse_direction: true

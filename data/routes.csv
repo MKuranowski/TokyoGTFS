@@ -130,6 +130,7 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,Shibayama.Shibayama,rail,SR,芝山鉄道線,Shibayama Railway Line,시바야마 철도선,芝山铁道线,芝山鐵道線,008459
 1,Chichibu.Chichibu,rail,CR,秩父本線,Chichibu Main Line,지치부 본선,秩父本线,秩父本線,4169E1
 1,MIR.TsukubaExpress,rail,TX,つくばエクスプレス,Tsukuba Express Line,츠쿠바 익스프레스선,筑波特快线,筑波快線,000084
+1,OdakyuHakone.HakoneTozan,rail,OH,箱根登山線,Hakone Tozan Line,하코네 등산선,箱根登山线,箱根登山線,FF4500
 1,TamaMonorail.TamaMonorail,rail,TT,多摩モノレール,Tama Monorail,다마 모노레일,多摩单轨电车,多摩單軌電車,22625E
 1,ShonanMonorail.Enoshima,monorail,SMR,湘南モノレール江の島線,Shōnan Monorail Enoshima Line,쇼난 모노레일 에노시마선,湘南单轨电车江之岛线,湘南單軌電車江之島線,B30000
 1,TokyoMonorail.HanedaAirport,monorail,MO,東京モノレール羽田空港線,Tokyo Monorail Haneda Airport Line,도쿄 모노레일 하네다 공항선,东京单轨电车羽田机场线,東京單軌電車羽田機場線,000080
@@ -142,4 +143,5 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,SNUT.NewShuttle,rail,NS,ニューシャトル,New Shuttle,뉴셔틀,New Shuttle,New Shuttle,FFD400
 1,Yamaman.Yukarigaoka,rail,,ユーカリが丘線,Yukarigaoka Line,유카리가오카선,有加利丘线,有加利丘線,00BA6E
 1,Kominato.Kominato,rail,,小湊鉄道線,Kominato Line,고미나토 철도선,小凑铁道线,小湊鐵道線,9D1800
-1,JR-Central.Tokaido,rail,CA,JR東海道線,JR Tokaidō Line,JR도카이도선,JR东海道线,JR東海道線,F68719
+1,JR-Central.Tokaido,rail,CA,JR東海道線,JR Tokaidō Line,JR 도카이도선,JR东海道线,JR東海道線,F68719
+1,JR-Central.Gotemba,rail,CB,JR御殿場線,JR Gotemba Line,JR 고텐바선,JR御殿场线,JR御殿場線,477543
