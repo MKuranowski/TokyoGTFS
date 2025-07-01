@@ -80,4 +80,12 @@ GTFS_HEADERS = {
         "feed_publisher_url",
         "feed_lang",
     ),
+    "translations.txt": (
+        "table_name",
+        "record_id",
+        "record_sub_id",
+        "field_name",
+        "language",
+        "translation",
+    ),
 }
