@@ -21,6 +21,7 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,JR-East.NaritaAbikoBranch,rail,,JR成田線我孫子支線,JR Narita Abiko Branch Line,JR 나리타선 아비코지선,JR成田线我孙子支线,JR成田線我孫子支線,31B86A
 1,JR-East.NaritaAirportBranch,rail,,JR成田線空港支線,JR Narita Airport Branch Line,JR 나리타선 공항지선,JR成田线机场支线,JR成田線機場支線,31B86A
 1,JR-East.NaritaExpress,rail,N’EX,JR成田エクスプレス,JR Narita Express,JR 나리타 익스프레스,JR成田特快,JR成田特快,D90411
+1,JR-East.Nikko,rail,,JR日光線,JR Nikkō Line,JR 닛코선,JR日光线,JR日光線,880022
 1,JR-East.Ome,rail,JC,JR青梅線,JR Ōme Line,JR 오메선,JR青梅线,JR青梅線,FF5C1E
 1,JR-East.Ryomo,rail,,JR両毛線,JR Ryōmō Line,JR 료모선,JR两毛线,JR兩毛線,FFDD3A
 1,JR-East.Sagami,rail,,JR相模線,JR Sagami Line,JR 사가미선,JR相模线,JR相模線,009793
@@ -143,5 +144,6 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,SNUT.NewShuttle,rail,NS,ニューシャトル,New Shuttle,뉴셔틀,New Shuttle,New Shuttle,FFD400
 1,Yamaman.Yukarigaoka,rail,,ユーカリが丘線,Yukarigaoka Line,유카리가오카선,有加利丘线,有加利丘線,00BA6E
 1,Kominato.Kominato,rail,,小湊鉄道線,Kominato Line,고미나토 철도선,小凑铁道线,小湊鐵道線,9D1800
+1,IzuHakone.Daiyuzan,rail,ID,伊豆箱根大雄山線,Izu Hakone Daiyuzan Line,이즈하코네 다이유잔선,伊豆箱根大雄山线,伊豆箱根大雄山線,0074BD
 1,JR-Central.Tokaido,rail,CA,JR東海道線,JR Tokaidō Line,JR 도카이도선,JR东海道线,JR東海道線,F68719
 1,JR-Central.Gotemba,rail,CB,JR御殿場線,JR Gotemba Line,JR 고텐바선,JR御殿场线,JR御殿場線,477543
