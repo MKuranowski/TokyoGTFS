@@ -6,7 +6,7 @@ from typing import cast
 
 from impuls import Task, TaskRuntime
 
-from ..util import json_items, strip_prefix
+from ..util import compact_json, json_items, strip_prefix
 
 
 class LoadStops(Task):
@@ -26,6 +26,7 @@ class LoadStops(Task):
 
                     stop_id = strip_prefix(cast(str, obj["owl:sameAs"]))
                     name = cast(str, obj["dc:title"] or "")
+                    kana = cast(str, obj.get("odpt:kana") or "")
                     code = cast(str, obj.get("odpt:busstopPoleNumber") or "")
                     lat = cast(float, obj.get("geo:lat") or 0.0)
                     lon = cast(float, obj.get("geo:long") or 0.0)
@@ -34,6 +35,7 @@ class LoadStops(Task):
                         self.logger.warning("Stop %s has no position", stop_id)
 
                     r.db.raw_execute(
-                        "INSERT INTO stops (stop_id, name, code, lat, lon) VALUES (?,?,?,?,?)",
-                        (stop_id, name, code, lat, lon),
+                        "INSERT INTO stops (stop_id, name, code, lat, lon, extra_fields_json) "
+                        "VALUES (?,?,?,?,?,?)",
+                        (stop_id, name, code, lat, lon, compact_json({"tts_stop_name": kana})),
                     )
