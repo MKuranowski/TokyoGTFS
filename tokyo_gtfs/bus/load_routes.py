@@ -50,13 +50,19 @@ class LoadRoutes(Task):
                             pattern_desc = note_parts[1]
 
                     # Extract inbound/outbound directions
+                    direction = None
                     match obj.get("odpt:direction"):
-                        case "0":
-                            direction = 0
                         case "1":
+                            direction = 0
+                        case "2":
                             direction = 1
-                        case _:
-                            direction = None
+                        case None:
+                            pass
+                        case d:
+                            self.logger.warning(
+                                "Weird odpt:direction value: %r, expected None, '1' or '2'",
+                                d,
+                            )
 
                     # Insert into DB
                     r.db.raw_execute(
