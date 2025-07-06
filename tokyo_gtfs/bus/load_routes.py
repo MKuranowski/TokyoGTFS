@@ -19,13 +19,15 @@ class LoadRoutes(Task):
         r.db.raw_execute(
             "CREATE TABLE patterns ("
             " pattern_id TEXT PRIMARY KEY,"
-            " route_id TEXT NOT NULL REFERENCES routes(route_id),"
+            " route_id TEXT NOT NULL REFERENCES routes(route_id)"
+            "  ON DELETE CASCADE ON UPDATE CASCADE,"
             " description TEXT,"
             " direction INTEGER CHECK (direction IN (0, 1))"
             ") STRICT;"
         )
         r.db.raw_execute(
-            "ALTER TABLE trips ADD COLUMN pattern_id TEXT REFERENCES patterns(pattern_id)"
+            "ALTER TABLE trips ADD COLUMN pattern_id TEXT "
+            "REFERENCES patterns(pattern_id) ON DELETE CASCADE ON UPDATE CASCADE"
         )
 
         with r.db.transaction():
