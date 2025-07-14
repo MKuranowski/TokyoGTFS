@@ -145,5 +145,11 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,Yamaman.Yukarigaoka,rail,,ユーカリが丘線,Yukarigaoka Line,유카리가오카선,有加利丘线,有加利丘線,00BA6E
 1,Kominato.Kominato,rail,,小湊鉄道線,Kominato Line,고미나토 철도선,小凑铁道线,小湊鐵道線,9D1800
 1,IzuHakone.Daiyuzan,rail,ID,伊豆箱根大雄山線,Izu Hakone Daiyuzan Line,이즈하코네 다이유잔선,伊豆箱根大雄山线,伊豆箱根大雄山線,0074BD
+1,IzuHakone.Sunzu,rail,IS,伊豆箱根駿豆線,Izu Hakone Sunzu Line,이즈하코네 슨즈선,伊豆箱根骏豆线,伊豆箱根駿豆線,0074BD
 1,JR-Central.Tokaido,rail,CA,JR東海道線,JR Tokaidō Line,JR 도카이도선,JR东海道线,JR東海道線,F68719
 1,JR-Central.Gotemba,rail,CB,JR御殿場線,JR Gotemba Line,JR 고텐바선,JR御殿场线,JR御殿場線,477543
+1,Choshi.Choshi,rail,CD,銚子電気鉄道線,Chōshi Electric Railway Line,조시 전기철도선,铫子电气铁道线,銚子電氣鐵道線,A52A2A
+1,Fujikyu.Fujikyu,rail,FJ,富士急行線,Fujikyuko Line,후지 급행선,富士急行線,富士急行線,0000FF
+1,Izukyu.Izukyu,rail,IZ,伊豆急行線,Izu Kyūkō Line,이즈 급행선,伊豆急行线,伊豆急行線,00BFFF
+1,KashimaRinkai.OaraiKashima,rail,,鹿島臨海鉄道大洗鹿島線,Kashima Rinkai Railway Ōarai Kashima Line,가시마 임해 철도 오아라이카시마선,鹿岛临海铁道大洗鹿岛线,鹿島臨海鐵道大洗鹿島線,FF0000
+1,UtsunomiyaLightRail.Lightline,tram,,宇都宮芳賀ライトレール線,Utsunomiya Haga Light Rail Line,우츠노미야 하가 경전철선,宇都宫芳贺轻轨线,宇都宮芳賀輕軌線,FFD700
