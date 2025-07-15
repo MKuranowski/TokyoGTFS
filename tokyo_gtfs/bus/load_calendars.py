@@ -103,7 +103,7 @@ class LoadCalendars(Task):
         )
 
     def get_dates_of(self, calendar: str, specific: Mapping[str, list[Date]]) -> list[Date]:
-        if d := specific.get(calendar):
+        if (d := specific.get(calendar)) is not None:
             return d
         weekdays = KNOWN_CALENDARS[calendar]
         return [d for d in self.range if (1 << self.effective_weekday_of(d)) & weekdays]
