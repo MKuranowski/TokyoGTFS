@@ -8,6 +8,7 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,JR-East.Joban,rail,,JR常磐線,JR Jōban Line,JR 조반선,JR常磐线,JR常磐線,0C7FC7
 1,JR-East.JobanLocal,rail,JL,JR常磐線各駅停車,JR Jōban Local Line,JR 조반선 각역정차,JR常磐线各站停车,JR常磐線各站停車,9B9C9F
 1,JR-East.JobanRapid,rail,JJ,JR常磐線快速,JR Jōban Rapid Line,JR 조반선 쾌속,JR常磐线快速,JR常磐線快速,31B86A
+,JR-East.Joetsu,rail,,JR上越線,JR Jōetsu Line,JR 조에쓰선,JR上越线,JR上越線,00ACD1
 1,JR-East.Kashima,rail,,JR鹿島線,JR Kashima Line,JR 가시마선,JR鹿岛线,JR鹿島線,C56E2E
 1,JR-East.Kawagoe,rail,,JR川越線,JR Kawagoe Line,JR 가와고에선,JR川越线,JR川越線,A8A39D
 1,JR-East.KeihinTohokuNegishi,rail,JK,JR京浜東北線・根岸線,JR Keihin-Tohoku-Negishi Line,JR 게이힌 도호쿠 네기시선,JR京滨东北根岸线,JR京濱東北根岸線,00BEEB
@@ -132,16 +133,16 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,Chichibu.Chichibu,rail,CR,秩父本線,Chichibu Main Line,지치부 본선,秩父本线,秩父本線,4169E1
 1,MIR.TsukubaExpress,rail,TX,つくばエクスプレス,Tsukuba Express Line,츠쿠바 익스프레스선,筑波特快线,筑波快線,000084
 1,OdakyuHakone.HakoneTozan,rail,OH,箱根登山線,Hakone Tozan Line,하코네 등산선,箱根登山线,箱根登山線,FF4500
-1,TamaMonorail.TamaMonorail,rail,TT,多摩モノレール,Tama Monorail,다마 모노레일,多摩单轨电车,多摩單軌電車,22625E
-1,ShonanMonorail.Enoshima,monorail,SMR,湘南モノレール江の島線,Shōnan Monorail Enoshima Line,쇼난 모노레일 에노시마선,湘南单轨电车江之岛线,湘南單軌電車江之島線,B30000
+1,TamaMonorail.TamaMonorail,monorail,TT,多摩モノレール,Tama Monorail,다마 모노레일,多摩单轨电车,多摩單軌電車,22625E
+1,ShonanMonorail.ShonanMonorail,monorail,SMR,湘南モノレール江の島線,Shōnan Monorail Enoshima Line,쇼난 모노레일 에노시마선,湘南单轨电车江之岛线,湘南單軌電車江之島線,B30000
 1,TokyoMonorail.HanedaAirport,monorail,MO,東京モノレール羽田空港線,Tokyo Monorail Haneda Airport Line,도쿄 모노레일 하네다 공항선,东京单轨电车羽田机场线,東京單軌電車羽田機場線,000080
 1,ChibaMonorail.Line1,monorail,CM1,千葉モノレール1号線,Chiba Monorail Line 1,지바 모노레일 1호선,千叶单轨电车1号线,千葉單軌電車1號線,008EB2
 1,ChibaMonorail.Line2,monorail,CM2,千葉モノレール2号線,Chiba Monorail Line 2,지바 모노레일 2호선,千叶单轨电车2号线,千葉單軌電車2號線,008EB2
 1,Ryutetsu.Nagareyama,rail,RN,流鉄流山線,Ryūtetsu Nagareyama Line,류테쓰 나가레야마선,流铁流山线,流鐵流山線,D64022
-1,EER.Enoshima,tram,EN,江ノ島電鉄線,Enoshima Electric Railway Line,에노시마 전철선,江之岛电铁线,江之島電鐵線,0C6346
-1,YSL.KanazawaSeasideLine,rail,,金沢シーサイドライン,Kanazawa Seaside Line,가나자와 시사이드 라인,金泽海岸线,金澤海岸線,F68B1E
+1,Enoden.Enoden,tram,EN,江ノ島電鉄線,Enoshima Electric Railway Line,에노시마 전철선,江之岛电铁线,江之島電鐵線,0C6346
+1,YokohamaSeaside.KanazawaSeaside,rail,,金沢シーサイドライン,Kanazawa Seaside Line,가나자와 시사이드 라인,金泽海岸线,金澤海岸線,F68B1E
 1,Isumi.Isumi,rail,,いすみ線,Isumi Line,이스미선,夷隅线,夷隅線,FFD400
-1,SNUT.NewShuttle,rail,NS,ニューシャトル,New Shuttle,뉴셔틀,New Shuttle,New Shuttle,FFD400
+1,SaitamaTransit.NewShuttle,rail,NS,ニューシャトル,New Shuttle,뉴셔틀,New Shuttle,New Shuttle,FFD400
 1,Yamaman.Yukarigaoka,rail,,ユーカリが丘線,Yukarigaoka Line,유카리가오카선,有加利丘线,有加利丘線,00BA6E
 1,Kominato.Kominato,rail,,小湊鉄道線,Kominato Line,고미나토 철도선,小凑铁道线,小湊鐵道線,9D1800
 1,IzuHakone.Daiyuzan,rail,ID,伊豆箱根大雄山線,Izu Hakone Daiyuzan Line,이즈하코네 다이유잔선,伊豆箱根大雄山线,伊豆箱根大雄山線,0074BD
@@ -152,4 +153,4 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,Fujikyu.Fujikyu,rail,FJ,富士急行線,Fujikyuko Line,후지 급행선,富士急行線,富士急行線,0000FF
 1,Izukyu.Izukyu,rail,IZ,伊豆急行線,Izu Kyūkō Line,이즈 급행선,伊豆急行线,伊豆急行線,00BFFF
 1,KashimaRinkai.OaraiKashima,rail,,鹿島臨海鉄道大洗鹿島線,Kashima Rinkai Railway Ōarai Kashima Line,가시마 임해 철도 오아라이카시마선,鹿岛临海铁道大洗鹿岛线,鹿島臨海鐵道大洗鹿島線,FF0000
-1,UtsunomiyaLightRail.Lightline,tram,,宇都宮芳賀ライトレール線,Utsunomiya Haga Light Rail Line,우츠노미야 하가 경전철선,宇都宫芳贺轻轨线,宇都宮芳賀輕軌線,FFD700
+1,UtsunomiyaLightRail.UtsunomiyaLightRail,tram,,宇都宮芳賀ライトレール線,Utsunomiya Haga Light Rail Line,우츠노미야 하가 경전철선,宇都宫芳贺轻轨线,宇都宮芳賀輕軌線,FFD700

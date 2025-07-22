@@ -54048,7 +54048,7 @@
     <nd ref='-272665' />
     <nd ref='-272666' />
     <nd ref='-272619' />
-    <tag k='SNUT.NewShuttle' v='yes' />
+    <tag k='SaitamaTransit.NewShuttle' v='yes' />
     <tag k='access' v='no' />
     <tag k='oneway' v='yes' />
     <tag k='railway' v='rail' />
@@ -54111,7 +54111,7 @@
     <nd ref='-272717' />
     <nd ref='-272718' />
     <nd ref='-272719' />
-    <tag k='SNUT.NewShuttle' v='yes' />
+    <tag k='SaitamaTransit.NewShuttle' v='yes' />
     <tag k='access' v='no' />
     <tag k='railway' v='rail' />
   </way>
@@ -54127,7 +54127,7 @@
     <nd ref='-272627' />
     <nd ref='-272628' />
     <nd ref='-272629' />
-    <tag k='SNUT.NewShuttle' v='yes' />
+    <tag k='SaitamaTransit.NewShuttle' v='yes' />
     <tag k='access' v='no' />
     <tag k='oneway' v='yes' />
     <tag k='railway' v='rail' />
@@ -54228,7 +54228,7 @@
     <nd ref='-272815' />
     <nd ref='-272816' />
     <nd ref='-272817' />
-    <tag k='ShonanMonorail.Enoshima' v='yes' />
+    <tag k='ShonanMonorail.ShonanMonorail' v='yes' />
     <tag k='access' v='no' />
     <tag k='railway' v='rail' />
   </way>
@@ -54447,7 +54447,7 @@
     <nd ref='-273037' />
     <nd ref='-273038' />
     <nd ref='-273039' />
-    <tag k='EER.Enoshima' v='yes' />
+    <tag k='Enoden.Enoden' v='yes' />
     <tag k='access' v='no' />
     <tag k='railway' v='rail' />
   </way>
@@ -54576,7 +54576,7 @@
     <nd ref='-273161' />
     <nd ref='-273162' />
     <nd ref='-273163' />
-    <tag k='YSL.KanazawaSeasideLine' v='yes' />
+    <tag k='YokohamaSeaside.KanazawaSeaside' v='yes' />
     <tag k='access' v='no' />
     <tag k='railway' v='rail' />
   </way>
@@ -58199,7 +58199,7 @@
     <nd ref='-276762' />
     <nd ref='-276763' />
     <nd ref='-276764' />
-    <tag k='UtsunomiyaLightRail.Lightline' v='yes' />
+    <tag k='UtsunomiyaLightRail.UtsunomiyaLightRail' v='yes' />
     <tag k='access' v='no' />
     <tag k='railway' v='rail' />
   </way>
