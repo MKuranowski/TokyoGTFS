@@ -8,7 +8,7 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,JR-East.Joban,rail,,JR常磐線,JR Jōban Line,JR 조반선,JR常磐线,JR常磐線,0C7FC7
 1,JR-East.JobanLocal,rail,JL,JR常磐線各駅停車,JR Jōban Local Line,JR 조반선 각역정차,JR常磐线各站停车,JR常磐線各站停車,9B9C9F
 1,JR-East.JobanRapid,rail,JJ,JR常磐線快速,JR Jōban Rapid Line,JR 조반선 쾌속,JR常磐线快速,JR常磐線快速,31B86A
-,JR-East.Joetsu,rail,,JR上越線,JR Jōetsu Line,JR 조에쓰선,JR上越线,JR上越線,00ACD1
+1,JR-East.Joetsu,rail,,JR上越線,JR Jōetsu Line,JR 조에쓰선,JR上越线,JR上越線,00ACD1
 1,JR-East.Kashima,rail,,JR鹿島線,JR Kashima Line,JR 가시마선,JR鹿岛线,JR鹿島線,C56E2E
 1,JR-East.Kawagoe,rail,,JR川越線,JR Kawagoe Line,JR 가와고에선,JR川越线,JR川越線,A8A39D
 1,JR-East.KeihinTohokuNegishi,rail,JK,JR京浜東北線・根岸線,JR Keihin-Tohoku-Negishi Line,JR 게이힌 도호쿠 네기시선,JR京滨东北根岸线,JR京濱東北根岸線,00BEEB
