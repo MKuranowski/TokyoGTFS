@@ -42,8 +42,6 @@ The script only creates GTFS for operators without GTFS feeds, but with ODPT JSO
 
 - Tokyu Bus,
 - Sotetsu Bus,
-- ~~Odakyu Bus~~ (missing stop positions),
-- ~~Tobu Bus~~ (Challenge-only, missing stop positions),
 - ~~Kanachu~~ (Challenge-only, missing stop positions),
 - ~~Kokusai Kogyo Bus~~ (Challenge-only, missing stop positions).
 
