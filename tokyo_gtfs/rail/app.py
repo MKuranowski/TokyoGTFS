@@ -14,6 +14,7 @@ from .generate_headsigns import GenerateHeadsigns
 from .generate_shapes import GenerateShapes
 from .gtfs import GTFS_HEADERS
 from .load_schedules import LoadSchedules
+from .mark_toll_train_types import MarkTollTrainTypes
 from .merge_routes import MergeRoutes
 from .separate_limited_expresses import SeparateLimitedExpresses
 from .simplify_blocks import SimplifyBlocks
@@ -25,6 +26,7 @@ class TokyoRailGTFS(App):
             options=options,
             tasks=[
                 LoadSchedules(),
+                MarkTollTrainTypes(),
                 GenerateBlocks(),
                 GenerateHeadsigns(),
                 FixYamanoteLineHeadsigns(),
