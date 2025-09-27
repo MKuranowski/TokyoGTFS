@@ -5,7 +5,7 @@ from argparse import Namespace
 
 from impuls import App, HTTPResource, LocalResource, Pipeline, PipelineOptions
 from impuls.model import Attribution, FeedInfo
-from impuls.tasks import AddEntity, RemoveUnusedEntities, SaveGTFS
+from impuls.tasks import AddEntity, ExecuteSQL, RemoveUnusedEntities, SaveGTFS
 
 from .curate import CurateAgencies, CurateRoutes, CurateStops
 from .fix_yamanote_headsigns import FixYamanoteLineHeadsigns
@@ -36,7 +36,14 @@ class TokyoRailGTFS(App):
                 SimplifyBlocks(),
                 GenerateShapes(),
                 RemoveUnusedEntities(),
-                # TODO: RemoveInvalidTranslations
+                ExecuteSQL(
+                    task_name="RemoveUnusedStopTranslations",
+                    statement=(
+                        "DELETE FROM translations "
+                        "WHERE table_name = 'stops' AND NOT EXISTS "
+                        "(SELECT 1 FROM stops WHERE stops.stop_id = translations.record_id)"
+                    ),
+                ),
                 CurateAgencies(),
                 CurateRoutes(),
                 AddEntity(
