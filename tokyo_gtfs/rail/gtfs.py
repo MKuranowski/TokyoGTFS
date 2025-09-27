@@ -20,6 +20,7 @@ GTFS_HEADERS = {
     ),
     "stops.txt": (
         "stop_id",
+        "stop_code",
         "stop_name",
         "stop_lat",
         "stop_lon",

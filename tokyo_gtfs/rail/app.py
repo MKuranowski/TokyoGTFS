@@ -5,9 +5,9 @@ from argparse import Namespace
 
 from impuls import App, HTTPResource, LocalResource, Pipeline, PipelineOptions
 from impuls.model import Attribution, FeedInfo
-from impuls.tasks import AddEntity, ModifyStopsFromCSV, RemoveUnusedEntities, SaveGTFS
+from impuls.tasks import AddEntity, RemoveUnusedEntities, SaveGTFS
 
-from .curate import CurateAgencies, CurateRoutes
+from .curate import CurateAgencies, CurateRoutes, CurateStops
 from .fix_yamanote_headsigns import FixYamanoteLineHeadsigns
 from .generate_blocks import GenerateBlocks
 from .generate_headsigns import GenerateHeadsigns
@@ -27,13 +27,13 @@ class TokyoRailGTFS(App):
             tasks=[
                 LoadSchedules(),
                 MarkTollTrainTypes(),
+                CurateStops(),  # NOTE: ids in the CSV must match stations.json, not the created GTFS
                 GenerateBlocks(),
                 GenerateHeadsigns(),
                 FixYamanoteLineHeadsigns(),
                 SeparateLimitedExpresses(),
                 MergeRoutes(),
                 SimplifyBlocks(),
-                ModifyStopsFromCSV("stations.csv"),
                 GenerateShapes(),
                 RemoveUnusedEntities(),
                 # TODO: RemoveInvalidTranslations
