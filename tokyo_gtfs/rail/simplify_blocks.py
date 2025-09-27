@@ -78,7 +78,6 @@ class SimplifyBlocks(Task):
         blocks = self.find_blocks_to_merge(r.db)
         with r.db.transaction():
             for block_id in blocks:
-                self.logger.debug("Merging block %s", block_id)
                 block = BlockWithTrips.retrieve(r.db, block_id)
                 self.merge_consecutive_trips_in_block(r.db, block)
             self.logger.debug("Removing alone blocks")
