@@ -154,3 +154,5 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,Izukyu.Izukyu,rail,IZ,伊豆急行線,Izu Kyūkō Line,이즈 급행선,伊豆急行线,伊豆急行線,00BFFF
 1,KashimaRinkai.OaraiKashima,rail,,鹿島臨海鉄道大洗鹿島線,Kashima Rinkai Railway Ōarai Kashima Line,가시마 임해 철도 오아라이카시마선,鹿岛临海铁道大洗鹿岛线,鹿島臨海鐵道大洗鹿島線,FF0000
 1,UtsunomiyaLightRail.UtsunomiyaLightRail,tram,,宇都宮芳賀ライトレール線,Utsunomiya Haga Light Rail Line,우츠노미야 하가 경전철선,宇都宫芳贺轻轨线,宇都宮芳賀輕軌線,FFD700
+1,Moka.Moka,rail,,真岡線,Moka Line,모카선,真岡线,真岡線,468935
+1,Hitachinaka.Minato,rail,,ひたちなか海浜鉄道湊線,Hitachinaka Seaside Railway Minato Line,히타치나카 해변 철도 미나토선,常陆那珂海滨铁道凑线,常陸那珂海濱鐵道湊線,E18831
