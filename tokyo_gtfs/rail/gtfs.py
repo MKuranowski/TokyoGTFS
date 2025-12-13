@@ -89,4 +89,9 @@ GTFS_HEADERS = {
         "language",
         "translation",
     ),
+    "transfers.txt": (
+        "from_trip_id",
+        "to_trip_id",
+        "transfer_type",
+    ),
 }

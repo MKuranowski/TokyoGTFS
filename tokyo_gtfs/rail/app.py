@@ -11,6 +11,7 @@ from .curate import CurateAgencies, CurateRoutes, CurateStops
 from .fix_yamanote_headsigns import FixYamanoteLineHeadsigns
 from .generate_blocks import GenerateBlocks
 from .generate_headsigns import GenerateHeadsigns
+from .generate_in_seat_transfers import GenerateInSeatTransfers
 from .generate_shapes import GenerateShapes
 from .gtfs import GTFS_HEADERS
 from .load_schedules import LoadSchedules
@@ -34,6 +35,7 @@ class TokyoRailGTFS(App):
                 SeparateLimitedExpresses(),
                 MergeRoutes(),
                 SimplifyBlocks(),
+                GenerateInSeatTransfers(),
                 GenerateShapes(),
                 RemoveUnusedEntities(),
                 ExecuteSQL(
