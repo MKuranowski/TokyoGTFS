@@ -1,4 +1,5 @@
 has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
+1,JR-East.Agatsuma,rail,,JR吾妻線,JR Agatsuma Line,JR 아가쓰마선,JR吾妻线,JR吾妻線,0F5474
 1,JR-East.Chuo,rail,CO,JR中央本線,JR Chūō Line,JR 주오 본선,JR中央本线,JR中央本線,0C7FC7
 1,JR-East.ChuoRapid,rail,JC,JR中央線快速,JR Chūō Rapid Line,JR 주오 쾌속선,JR中央线快速,JR中央線快速,FF5C1E
 1,JR-East.ChuoSobuLocal,rail,JB,JR中央・総武緩行線,JR Chūō-Sobu Local Line,JR 주오·소부 완행선,JR中央·总武缓行线,JR中央·總武緩行線,FFDD3A
@@ -28,6 +29,7 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,JR-East.Ryomo,rail,,JR両毛線,JR Ryōmō Line,JR 료모선,JR两毛线,JR兩毛線,FFDD3A
 1,JR-East.Sagami,rail,,JR相模線,JR Sagami Line,JR 사가미선,JR相模线,JR相模線,009793
 1,JR-East.SaikyoKawagoe,rail,JA,JR埼京線・川越線,JR Saikyō-Kawagoe Line,JR 사이쿄 가와고에선,JR埼京线·川越线,JR埼京線·川越線,2DBC8F
+1,JR-East.Shinetsu,rail,,JR信越本線,JR Shinetsu Line,JR 신에쓰 본선,JR信越本线,JR信越本線,9ACD32
 1,JR-East.ShonanShinjuku,rail,JS,JR湘南新宿ライン,JR Shōnan-Shinjuku Line,JR 쇼난 신주쿠 라인,JR湘南新宿线,JR湘南新宿線,FA2D18
 1,JR-East.Sobu,rail,,JR総武本線,JR Sōbu Line,JR 소부 본선,JR总武本线,JR總武本線,0C7FC7
 1,JR-East.SobuRapid,rail,JO,JR総武快速線,JR Sōbu Rapid Line,JR 소부 쾌속선,JR总武快速线,JR總武快速線,0C7FC7
