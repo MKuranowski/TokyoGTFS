@@ -1,4 +1,4 @@
-# © Copyright 2025 Mikołaj Kuranowski
+# © Copyright 2025-2026 Mikołaj Kuranowski
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import csv
@@ -20,6 +20,7 @@ from .load_calendars import LoadCalendars
 from .load_routes import LoadRoutes
 from .load_stops import LoadStops
 from .load_timetables import LoadTimetables
+from .scrape_tokyu_stops import ScrapeTokyuBusStops
 
 
 class TokyoBusGTFS(App):
@@ -71,6 +72,7 @@ class TokyoBusGTFS(App):
                         lang="ja",
                     ),
                 ),
+                ScrapeTokyuBusStops(),
                 SaveGTFS(GTFS_HEADERS, "tokyo_missing_bus.zip", ensure_order=True),
             ],
             resources={
