@@ -159,3 +159,4 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,UtsunomiyaLightRail.UtsunomiyaLightRail,tram,,宇都宮芳賀ライトレール線,Utsunomiya Haga Light Rail Line,우츠노미야 하가 경전철선,宇都宫芳贺轻轨线,宇都宮芳賀輕軌線,FFD700
 1,Moka.Moka,rail,,真岡線,Moka Line,모카선,真岡线,真岡線,468935
 1,Hitachinaka.Minato,rail,,ひたちなか海浜鉄道湊線,Hitachinaka Seaside Railway Minato Line,히타치나카 해변 철도 미나토선,常陆那珂海滨铁道凑线,常陸那珂海濱鐵道湊線,E18831
+1,Joshin.Joshin,rail,,上信線,Jōshin Line,조신선,上信线,上信線,FF0000
