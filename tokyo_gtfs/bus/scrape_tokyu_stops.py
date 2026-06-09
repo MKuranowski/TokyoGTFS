@@ -175,15 +175,11 @@ class CachedStops:
         # Add stop groups until we hit limit, starting with oldest
         by_age_ordered = sorted(by_age.items(), reverse=True, key=itemgetter(0))
         for _, groups in by_age_ordered:
-            if len(groups) >= limit:
-                extra.update(groups)
-                limit -= len(groups)
-                if limit <= 0:
-                    break
+            to_add = min(len(groups), limit)
+            extra.update(random.sample(groups, to_add))
+            limit -= to_add
 
-            else:
-                extra.update(random.sample(groups, limit))
-                limit = 0
+            if limit <= 0:
                 break
 
         return extra
