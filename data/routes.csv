@@ -35,6 +35,8 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,JR-East.SobuRapid,rail,JO,JR総武快速線,JR Sōbu Rapid Line,JR 소부 쾌속선,JR总武快速线,JR總武快速線,0C7FC7
 1,JR-East.SotetsuDirect,rail,,JR相鉄直通線,JR Sōtetsu Link Line,JR 소테쓰 직통선,JR相铁直通线,JR相鐵直通線,2DBC8F
 1,JR-East.Sotobo,rail,,JR外房線,JR Sotobō Line,JR 소토보선,JR外房线,JR外房線,FF5C1E
+1,JR-East.Suigun,rail,,JR水郡線,JR Suigun Line,JR 스이군선,JR水郡线,JR水郡線,368C44
+1,JR-East.SuigunBranch,rail,,JR水郡線支線,JR Suigun Branch Line,JR 스이군선 지선,JR水郡线支线,JR水郡線支線,368C44
 1,JR-East.Takasaki,rail,JU,JR高崎線,JR Takasaki Line,JR 다카사키선,JR高崎线,JR高崎線,FF8C27
 1,JR-East.Togane,rail,,JR東金線,JR Tōgane Line,JR 도가네선,JR东金线,JR東金線,FF8C27
 1,JR-East.Tokaido,rail,JT,JR東海道線,JR Tōkaidō Line,JR 도카이도선,JR东海道线,JR東海道線,FF8C27
@@ -160,3 +162,5 @@ has_geo,id,mode,code,name_ja,name_en,name_ko,name_zh-Hans,name_zh-Hant,color
 1,Moka.Moka,rail,,真岡線,Moka Line,모카선,真岡线,真岡線,468935
 1,Hitachinaka.Minato,rail,,ひたちなか海浜鉄道湊線,Hitachinaka Seaside Railway Minato Line,히타치나카 해변 철도 미나토선,常陆那珂海滨铁道凑线,常陸那珂海濱鐵道湊線,E18831
 1,Joshin.Joshin,rail,,上信線,Jōshin Line,조신선,上信线,上信線,FF0000
+1,Jomo.Jomo,rail,,上毛線,Jōmō Line,조모선,上毛线,上毛線,40E0D0
+1,WataraseKeikoku.WataraseKeikoku,rail,WK,わたらせ渓谷線,Watarase Keikoku Line,와타라세 계곡선,渡良濑溪谷线,渡良瀨溪谷線,6D0023
